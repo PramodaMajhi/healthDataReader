@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:hl7-org:v3 ../../../../../../Documents/03%20Professional/01%20HL7/000000%20CDA%20R2%20Extensions/20160601%20CDA_SDTC/infrastructure/cda/CDA_SDTC.xsd"
+ xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+  <realmCode code="US" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="2.16.840.1.113883.10.20.29.1" extension="2015-08-01" />
+  <templateId root="2.16.840.1.113883.4.823.1.2.1" extension="2016-07-01" />
+  <templateId root="2.16.840.1.113883.4.823.1.1.1" extension="2016-07-01" />
+  <id root="2.16.840.1.113883.3.3208.101.1" extension="20130607100315-CCDA-CCD" />
+  <code code="81334-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal advance care plan" />
+  <title mediaType="text/plain" representation="TXT">Personal Advance Care Plan Document</title>
+  <effectiveTime value="20161108104302.057-0400" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
+  <languageCode code="en-US" />
+  <setId root="2.16.840.1.113883.4.823.1.219" extension="11" />
+  <versionNumber value="11" />
+  <recordTarget>
+    <patientRole>
+      <id root="2.16.840.1.113883.4.823.1" extension="20120213211501-219" />
+      <addr use="HP">
+        <streetAddressLine partType="SAL">456 Vaultina Dr.</streetAddressLine>
+        <city partType="CTY">Dallas</city>
+        <state partType="STA">TX</state>
+        <postalCode partType="ZIP">75219</postalCode>
+        <country partType="CNT">US</country>
+      </addr>
+      <telecom value="tel:+12145859878" use="HP" />
+      <telecom value="tel:+12145338525" use="MC" />
+      <telecom value="mailto:ketema.harris@blueshieldca.com" />
+      <patient classCode="PSN" determinerCode="INSTANCE">
+        <name use="L">
+          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Jawara</given>
+          <family partType="FAM">Harris</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male" />
+        <birthTime value="19770930" />
+        <maritalStatusCode nullFlavor="NI" />
+        <religiousAffiliationCode>
+          <originalText mediaType="text/plain" language="en-US">Christian</originalText>
+        </religiousAffiliationCode>
+        <raceCode nullFlavor="NI" />
+        <ethnicGroupCode nullFlavor="NI" />
+        <languageCommunication>
+          <languageCode code="eng" />
+          <modeCode nullFlavor="NI" />
+          <proficiencyLevelCode nullFlavor="NI" />
+          <preferenceInd value="true" />
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20180123120935.323-0400" />
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="66666" />
+      <id root="2.16.840.1.113883.4.823.1" extension="20120213211501-219" />
+      <code code="ONESELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Self" />
+      <addr use="HP">
+        <streetAddressLine partType="SAL">456 Vaultina Dr.</streetAddressLine>
+        <city partType="CTY">Dallas</city>
+        <state partType="STA">TX</state>
+        <postalCode partType="ZIP">75219</postalCode>
+        <country partType="CNT">US</country>
+      </addr>
+      <telecom value="tel:+12145859878" use="HP" />
+      <telecom value="tel:+12145338525" use="MC" />
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name use="L">
+          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Jawara</given>
+          <family partType="FAM">Harris</family>
+        </name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <author>
+    <time value="20180123120935.323-0400" />
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="66660" />
+      <addr>
+        <streetAddressLine partType="SAL">P.O. Box 832624</streetAddressLine>
+        <city partType="CTY">Richardson</city>
+        <state partType="STA">TX</state>
+        <postalCode partType="ZIP">75083</postalCode>
+        <country partType="CNT">US</country>
+      </addr>
+      <telecom value="tel:+1(202)776-7700" />
+      <assignedAuthoringDevice classCode="DEV" determinerCode="INSTANCE">
+        <manufacturerModelName mediaType="text/plain" representation="TXT" language="en-US">AD Vault MyDirectives.com</manufacturerModelName>
+        <softwareName mediaType="text/plain" representation="TXT" language="en-US">MyDirectives.com v2.0</softwareName>
+      </assignedAuthoringDevice>
+      <representedOrganization>
+        <id root="1.3.6.1.4.1.42424242.4.99930.4" extension="4" />
+        <name use="L">ADVault, Inc.</name>
+        <telecom value="tel:+1(202)776-7700" use="WP" />
+        <addr use="WP">
+          <streetAddressLine partType="SAL">P.O. Box 832624</streetAddressLine>
+          <city partType="CTY">Richardson</city>
+          <state partType="STA">TX</state>
+          <postalCode partType="ZIP">75083</postalCode>
+          <country partType="CNT">US</country>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <dataEnterer>
+    <assignedEntity>
+      <id root="2.16.840.1.113883.4.6" extension="66666" />
+      <code code="ONESELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Self">
+        <originalText mediaType="text/plain" language="en-US" />
+      </code>
+      <addr use="HP">
+        <streetAddressLine partType="SAL">456 Vaultina Dr.</streetAddressLine>
+        <city partType="CTY">Dallas</city>
+        <state partType="STA">TX</state>
+        <postalCode partType="ZIP">75219</postalCode>
+        <country partType="CNT">US</country>
+      </addr>
+      <telecom value="tel:+12145859878" use="HP" />
+      <telecom value="tel:+12145338525" use="MC" />
+      <telecom value="mailto:Ketemab@testaccount.edu" />
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name use="L">
+          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Jawara</given>
+          <family partType="FAM">Harris</family>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </dataEnterer>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.16.840.1.113883.4.6" extension="44444" />
+        <name>MyDirectives.com</name>
+        <telecom value="tel:+1(202)776-7700" use="WP" />
+        <addr use="WP">
+          <streetAddressLine partType="SAL">P.O. Box 832624</streetAddressLine>
+          <city partType="CTY">Richardson</city>
+          <state partType="STA">TX</state>
+          <postalCode partType="ZIP">75083</postalCode>
+          <country partType="CNT">US</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <authenticator>
+    <time value="20161108104302.057-0400" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="2.16.840.1.113883.3.3208.101.3" extension="20161108104302-219" />
+      <code code="ONESELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Self">
+        <originalText mediaType="text/plain" language="en-US">Self</originalText>
+      </code>
+      <addr use="HP">
+        <streetAddressLine partType="SAL">456 Vaultina Dr.</streetAddressLine>
+        <city partType="CTY">Dallas</city>
+        <state partType="STA">TX</state>
+        <postalCode partType="ZIP">75219</postalCode>
+        <country partType="CNT">US</country>
+      </addr>
+      <telecom value="tel:+12145859878" use="HP" />
+      <telecom value="tel:+12145338525" use="MC" />
+      <telecom value="mailto:Ketemab@testaccount.edu" />
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name use="L">
+          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Jawara</given>
+          <family partType="FAM">Harris</family>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <participant typeCode="CST">
+    <time value="20130629085411.417-0400" />
+    <associatedEntity classCode="AGNT">
+      <code>
+        <originalText mediaType="text/plain" language="en-US">Friend</originalText>
+      </code>
+      <telecom value="mailto:zuckerjeff@gmail.com" use="HP" />
+      <associatedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name>
+          <given partType="GIV">Jeff Zucker</given>
+        </name>
+      </associatedPerson>
+    </associatedEntity>
+  </participant>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.4.823.1.3.1" extension="2016-07-01" />
+          <code code="81334-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal Advance Care Plan" />
+          <title mediaType="text/plain" representation="TXT" language="en-US">Personal Emergency, Critical and Advance Care Plan</title>
+          <text><paragraph><content styleCode="Bold">It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</content> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences.  There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <content styleCode="Bold">If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</content></paragraph></text>
+          <component>
+            <section>
+              <templateId root="2.16.840.1.113883.4.823.1.3.3" extension="2016-07-01" />
+              <code code="81335-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Healthcare agent" />
+              <title mediaType="text/plain" representation="TXT" language="en-US">Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents</title>
+              <text><paragraph>IF THIS PART OF THE uADD™ IS LEFT BLANK, I AM DELIBERATELY DECLINING<br />TO DESIGNATE A HEALTHCARE AGENT AND REQUESTING THAT<br />THE DOCTORS ON DUTY MAKE DECISIONS BASED ON MY GUIDELINES.</paragraph>
+
+    <paragraph>I am appointing the person or persons below as my healthcare agent and, if applicable, as my alternate healthcare agent(s), and I am granting to each of them the legal authority to make medical treatment decisions on my behalf and to consult with my physician and others.  The power to make medical treatment decisions that I am granting to my healthcare agent(s) is expressly subject to, and limited by, the choices that I have expressed elsewhere in my uADD.  If my medical treatment choices are not clear, I am authorizing and directing my healthcare agent to make decisions in my best interests and based on what is known of my wishes.</paragraph>
+            <content ID="HealthAgent1">
+                    <content styleCode="Bold">Primary Healthcare Agent</content><br />
+                    <content ID="HealthAgent1Type">The person I choose as my Primary Healthcare Agent is:</content><br />
+                <content styleCode="Answer">
+                        <content ID="HealthAgent1Person">
+        Jeff Zucker
+            <content ID="HealthAgent1Rel">(Friend)</content>
+    </content><br />
+        <content ID="HealthAgent1Email">
+            zuckerjeff@gmail.com
+        </content><br />
+        <content ID="HealthAgent1SelectedDate">
+            [SELECTED to act as a healthcare agent on 6/29/2013, at 8:54 AM CDT]
+        </content><br />
+        <content ID="HealthAgent1AcceptanceDate" styleCode="RedAnswer">
+            [As of 1/23/2018, at 12:09 PM CDT, a response is still PENDING]
+        </content><br />
+
+                </content>
+            </content><br />
+            <content ID="HealthAgent2">
+                    <content styleCode="Bold" ID="HealthAgent2Type">First Alternate Healthcare Agent</content><br />
+                    <content ID="HealthAgent2Powers">If this healthcare agent is unable or unwilling to make medical treatment decisions for me, or if my spouse is designated as my primary healthcare agent and our marriage is annulled, or we are divorced or legally separated, then my next choice for a healthcare agent is:</content><br />
+                <content styleCode="Answer">
+                        <content ID="HealthAgent2Person">
+        S. Leonard Susskind
+            <content ID="HealthAgent2Rel">(Friend)</content>
+    </content><br />
+        <content ID="HealthAgent2Email">
+            sbrown@advaultinc.com
+        </content><br />
+        <content ID="HealthAgent2SelectedDate">
+            [SELECTED to act as a healthcare agent on 2/14/2012, at 11:00 AM CDT]
+        </content><br />
+        <content ID="HealthAgent2AcceptanceDate" styleCode="RedAnswer">
+            [ACCEPTED to act as a healthcare agent on 11/8/2016, at 3:37 PM CDT]
+        </content><br />
+
+                </content>
+            </content><br />
+            <content ID="HealthAgent3">
+                    <content styleCode="Bold" ID="HealthAgent3Type">Second Alternate Healthcare Agent</content><br />
+                    <content ID="HealthAgent3Powers">If this alternate healthcare agent is unable or unwilling to make medical treatment decisions for me, or if my spouse is designated as my first alternate healthcare agent and our marriage is annulled, or we are divorced or legally separated, then my next choice for a healthcare agent is:</content><br />
+                <content styleCode="Answer">
+                        <content ID="HealthAgent3Person">
+        Jay Z Polkinghorne
+            <content ID="HealthAgent3Rel">(friend)</content>
+    </content><br />
+        <content ID="HealthAgent3Email">
+            jzucker@advaultinc.com
+        </content><br />
+        <content ID="HealthAgent3SelectedDate">
+            [SELECTED to act as a healthcare agent on 2/14/2012, at 11:00 AM CDT]
+        </content><br />
+        <content ID="HealthAgent3AcceptanceDate" styleCode="RedAnswer">
+            [ACCEPTED to act as a healthcare agent on 2/14/2012, at 12:47 PM CDT]
+        </content><br />
+
+                </content>
+            </content><br />
+    <content ID="HCA_1">
+        <content ID="HCA_1_Q" styleCode="Bold">
+            My Healthcare Agent’s General Authority
+        </content><br />
+        <content ID="HCA_1_PL">
+            <content>Subject to my medical treatment choices expressed elsewhere in this uADD™ and applicable law that requires otherwise, I grant to my healthcare agent the power to make all choices and medical treatment decisions for me.</content>
+        </content>
+    </content><br />
+    <content ID="HCA_2">
+        <content ID="HCA_2_C">
+            If I cannot express my own wishes for medical treatment,
+        </content>
+        <content ID="HCA_2_PL">
+            I would like the doctors treating me, as well as my healthcare agent if I have chosen one, to make decisions based as much as possible and appropriate on my instructions below.
+        </content>
+    </content>
+    <content ID="HCA_3" styleCode="Answer">
+        <content ID="HCA_3_C">
+            If at some point in the future I am declared incompetent,
+        </content>
+        <content ID="HCA_3_PL">
+            I DO NOT want to be allowed to override these preferences. I want my doctors to follow the preferences I express in this document.        </content>
+    </content><br /><br />
+    <content ID="HCA_4">
+        <content ID="HCA_4_PL">
+            Unless I have stated otherwise somewhere else in this uADD™, I understand that my healthcare agent may reconsider my medical treatment choices expressed above in light of my other instructions contained elsewhere in this uADD™ or new medical information.
+        </content>
+    </content><br /></text>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2016-07-01" />
+                  <id root="720D50C7-3D28-495F-BB58-B8F1CD2DA8C4" />
+                  <code code="75783-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Primary Healthcare Agent">
+                    <originalText>
+                      <reference value="#HealthAgent1Type" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#HealthAgent1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20130629085411.417-0400" />
+                  <participant typeCode="CST">
+                    <participantRole classCode="AGNT">
+                      <id root="3E204B2C-A74E-464B-AC18-B0CAAB3BF27D" />
+                      <code>
+                        <originalText mediaType="text/plain" language="en-US">Friend</originalText>
+                      </code>
+                      <telecom value="mailto:zuckerjeff@gmail.com" use="HP" />
+                      <playingEntity>
+                        <code code="63161005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Principle">
+                          <originalText>
+                            <reference value="#HealthAgent1Type" />
+                          </originalText>
+                        </code>
+                        <name>
+                          <given partType="GIV">Jeff Zucker</given>
+                        </name>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2016-07-01" />
+                  <id root="71B68F8E-4AB0-466E-A9CF-EF724B23E191" />
+                  <code code="75784-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="First Alternative Health Agent">
+                    <originalText>
+                      <reference value="#HealthAgent2Type" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#HealthAgent2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20120214110030.013-0400" />
+                  <participant typeCode="CST">
+                    <participantRole classCode="AGNT">
+                      <id root="72FCEB81-B862-476C-9620-4C3D45FEDF0D" />
+                      <code>
+                        <originalText mediaType="text/plain" language="en-US">Friend</originalText>
+                      </code>
+                      <telecom value="mailto:sbrown@advaultinc.com" use="HP" />
+                      <playingEntity>
+                        <code code="2603003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Secondary">
+                          <originalText>
+                            <reference value="#HealthAgent2Type" />
+                          </originalText>
+                        </code>
+                        <name>
+                          <given partType="GIV">S. Leonard Susskind</given>
+                        </name>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2016-07-01" />
+                  <id root="ECFCCB76-B39C-4692-B934-AC875B98E03C" />
+                  <code code="75784-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="First Alternative Health Agent">
+                    <originalText>
+                      <reference value="#HealthAgent2Type" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#HealthAgent2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20161108153735.617-0400" />
+                  <participant typeCode="VRF">
+                    <participantRole classCode="AGNT">
+                      <id root="C1F9B938-5A4C-4439-82ED-CA5A9884EB06" />
+                      <code>
+                        <originalText mediaType="text/plain" language="en-US">Friend</originalText>
+                      </code>
+                      <telecom value="mailto:sbrown@advaultinc.com" use="HP" />
+                      <playingEntity>
+                        <code code="2603003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Secondary">
+                          <originalText>
+                            <reference value="#HealthAgent2Type" />
+                          </originalText>
+                        </code>
+                        <name>
+                          <given partType="GIV">S. Leonard Susskind</given>
+                        </name>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2016-07-01" />
+                  <id root="E6B028DF-7441-4CCE-B98E-35620C9DB35E" />
+                  <code code="75785-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Second Alternative Health Agent">
+                    <originalText>
+                      <reference value="#HealthAgent3Type" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#HealthAgent3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20120214110030.013-0400" />
+                  <participant typeCode="CST">
+                    <participantRole classCode="AGNT">
+                      <id root="05A84FBD-7783-4A52-8B98-E32C4568616A" />
+                      <code>
+                        <originalText mediaType="text/plain" language="en-US">friend</originalText>
+                      </code>
+                      <telecom value="mailto:jzucker@advaultinc.com" use="HP" />
+                      <playingEntity>
+                        <code code="2603003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Secondary">
+                          <originalText>
+                            <reference value="#HealthAgent3Type" />
+                          </originalText>
+                        </code>
+                        <name>
+                          <given partType="GIV">Jay Z Polkinghorne</given>
+                        </name>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2016-07-01" />
+                  <id root="8D0FF077-C37A-4B4E-A24B-288DBA02D29F" />
+                  <code code="75785-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Second Alternative Health Agent">
+                    <originalText>
+                      <reference value="#HealthAgent3Type" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#HealthAgent3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="20120214124754.777-0400" />
+                  <participant typeCode="VRF">
+                    <participantRole classCode="AGNT">
+                      <id root="29A12FE4-715C-4EDE-BD09-ACD9A8165EF6" />
+                      <code>
+                        <originalText mediaType="text/plain" language="en-US">friend</originalText>
+                      </code>
+                      <telecom value="mailto:jzucker@advaultinc.com" use="HP" />
+                      <playingEntity>
+                        <code code="2603003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Secondary">
+                          <originalText>
+                            <reference value="#HealthAgent3Type" />
+                          </originalText>
+                        </code>
+                        <name>
+                          <given partType="GIV">Jay Z Polkinghorne</given>
+                        </name>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.4" extension="2016-07-01" />
+                  <id root="85CDF487-305A-4CE9-BBB1-204FFD6A7FDF" />
+                  <code code="75786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Powers Granted to Health Agent">
+                    <originalText>
+                      <reference value="#HCA_1_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#HCA_1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#HCA_1_PL" />
+                  </value>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.4" extension="2016-07-01" />
+                  <id root="4AA0F864-DD6A-4369-B0DC-0C99F6BF4901" />
+                  <code code="75786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Powers Granted to Health Agent" />
+                  <text>
+                    <reference value="#HCA_2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#HCA_2_PL" />
+                  </value>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#HCA_2_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.4" extension="2016-07-01" />
+                  <id root="FE6A75F5-2E92-48C7-AE1E-DD1E36CD42F8" />
+                  <code code="75786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Powers Granted to Health Agent" />
+                  <text>
+                    <reference value="#HCA_3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#HCA_3_PL" />
+                  </value>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#HCA_3_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.4" extension="2016-07-01" />
+                  <id root="5DC14D70-CF54-4A06-AC37-78B0E3E1779A" />
+                  <code code="75786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Powers Granted to Health Agent" />
+                  <text>
+                    <reference value="#HCA_4" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#HCA_4_PL" />
+                  </value>
+                </observation>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <templateId root="2.16.840.1.113883.4.823.1.3.4" extension="2016-07-01" />
+              <code code="81336-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="GPP certain health cond" />
+              <title mediaType="text/plain" representation="TXT" language="en-US">Expression of Healthcare Treatment Wishes and Desires</title>
+              <text><content styleCode="Bold">My Advance Care Goals</content><br /><br />
+            <content ID="GPP_eol_1">
+                <content ID="GPP_eol_1_Q">
+                    <content ID="GPP_eol_priorities_criteria">If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</content>
+                </content>
+            </content>
+            <list listType="ordered" ID="GPP_eol_1_A" styleCode="Answer">
+                    <item ID="GPP_eol_priorities_1-1">
+                        Being at peace with my God
+                    </item>
+                    <item ID="GPP_eol_priorities_1-2">
+                        Being with my family
+                    </item>
+                    <item ID="GPP_eol_priorities_1-3">
+                        Being free from pain
+                    </item>
+                    <item ID="GPP_eol_priorities_1-4">
+                        Not being a physical burden to my family
+                    </item>
+                    <item ID="GPP_eol_priorities_1-5">
+                        Being able to feed, bathe, and take care of myself
+                    </item>
+                    <item ID="GPP_eol_priorities_1-6">
+                        Resolving conflicts
+                    </item>
+
+            </list>
+            <content ID="GPP_eol_3">
+                <content ID="GPP_eol_3_C">
+                    If I am having significant pain or suffering,
+                </content>
+                <content ID="GPP_eol_3_I" styleCode="Answer">
+                    I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.
+                </content>
+            </content><br /><br />
+    <content styleCode="Bold">My Preferences in Specific Circumstances</content><br /><br />
+    <content>In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations.</content><br /><br />
+        <content ID="GPP_eol_4">
+            <content ID="GPP_eol_4_C">If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings,</content>
+            
+                <content ID="GPP_eol_4_I" styleCode="Answer">
+                    I would like for them to keep trying life-sustaining treatments
+
+                                        indefinitely.                                    </content>
+                                </content><br /><br />
+        <content ID="GPP_eol_6">
+            <content ID="GPP_eol_6_C">
+                If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time,
+            </content>
+
+                <content ID="GPP_eol_6_I" styleCode="Answer">
+                    I would like for them to keep trying life-sustaining treatments
+
+                    for 2 months.                                                        </content>
+                                </content><br /><br />
+        <content ID="GPP_eol_8">
+            <content ID="GPP_eol_8_Q">
+                Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):
+            </content><br />
+            <content ID="GPP_eol_8_I" styleCode="Answer">
+                I want CPR attempted <content styleCode="Underline">unless</content> my doctor says
+            </content>
+                <content ID="GPP_eol_8_C" styleCode="Answer">
+                    I have a terminal illness or a severe, irreversible brain injury, OR I have little chance of long-term survival if my heart or breathing stop, and an attempt to resuscitate me would cause me significant suffering, OR it simply will not work in my condition.
+                </content>
+        </content><br /><br />
+        <content styleCode="Bold">Other Instructions</content><br /><br />
+            <content ID="GPP_eol_10">
+                <content ID="GPP_eol_10_Q">If it were possible to choose, here is where I would like to spend my final days:</content>
+                <content ID="GPP_eol_10_A" styleCode="Answer">
+At home.I would like to receive hospice care at home if possible.                </content>
+            </content>
+            <br /><br /></text>
+              <entry>
+                <organizer classCode="CLUSTER" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.7" extension="2016-07-01" />
+                  <id root="BA5C07F7-2DC0-4BE7-86C3-ECFC4BA15969" />
+                  <code code="81340-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Order of priorities">
+                    <originalText>
+                      <reference value="#GPP_eol_1" />
+                    </originalText>
+                  </code>
+                  <statusCode code="completed" />
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_criteria" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                  <component typeCode="COMP"><sdtc:priorityNumber value="1" />
+                    <observation classCode="OBS" moodCode="GOL">
+                      <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                      <id root="27958944-855C-479D-A104-24E14872BC46" />
+                      <code code="81378-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities under certain health conditions">
+                        <originalText>
+                          <reference value="#GPP_eol_1_Q" />
+                        </originalText>
+                      </code>
+                      <text>
+                        <reference value="#GPP_eol_priorities_1-1" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_1-1" />
+                      </value>
+                    </observation>
+                  </component>
+                  <component typeCode="COMP"><sdtc:priorityNumber value="2" />
+                    <observation classCode="OBS" moodCode="GOL">
+                      <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                      <id root="55C3E329-0F80-4691-B0C8-682AE65AC2DD" />
+                      <code code="81378-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities under certain health conditions">
+                        <originalText>
+                          <reference value="#GPP_eol_1_Q" />
+                        </originalText>
+                      </code>
+                      <text>
+                        <reference value="#GPP_eol_priorities_1-2" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_1-2" />
+                      </value>
+                    </observation>
+                  </component>
+                  <component typeCode="COMP"><sdtc:priorityNumber value="3" />
+                    <observation classCode="OBS" moodCode="GOL">
+                      <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                      <id root="2C601D23-91CC-462B-90F5-6208A3200243" />
+                      <code code="81378-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities under certain health conditions">
+                        <originalText>
+                          <reference value="#GPP_eol_1_Q" />
+                        </originalText>
+                      </code>
+                      <text>
+                        <reference value="#GPP_eol_priorities_1-3" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_1-3" />
+                      </value>
+                    </observation>
+                  </component>
+                  <component typeCode="COMP"><sdtc:priorityNumber value="4" />
+                    <observation classCode="OBS" moodCode="GOL">
+                      <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                      <id root="8F361ACE-4200-4696-844D-FDD7BDCC9E5C" />
+                      <code code="81378-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities under certain health conditions">
+                        <originalText>
+                          <reference value="#GPP_eol_1_Q" />
+                        </originalText>
+                      </code>
+                      <text>
+                        <reference value="#GPP_eol_priorities_1-4" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_1-4" />
+                      </value>
+                    </observation>
+                  </component>
+                  <component typeCode="COMP"><sdtc:priorityNumber value="5" />
+                    <observation classCode="OBS" moodCode="GOL">
+                      <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                      <id root="DFFDDE33-2ABF-458E-8FBC-5D2DE3BEA755" />
+                      <code code="81378-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities under certain health conditions">
+                        <originalText>
+                          <reference value="#GPP_eol_1_Q" />
+                        </originalText>
+                      </code>
+                      <text>
+                        <reference value="#GPP_eol_priorities_1-5" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_1-5" />
+                      </value>
+                    </observation>
+                  </component>
+                  <component typeCode="COMP"><sdtc:priorityNumber value="6" />
+                    <observation classCode="OBS" moodCode="GOL">
+                      <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                      <id root="B75B0D7A-FB97-4342-A82A-C0D0C50261C5" />
+                      <code code="81378-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities under certain health conditions">
+                        <originalText>
+                          <reference value="#GPP_eol_1_Q" />
+                        </originalText>
+                      </code>
+                      <text>
+                        <reference value="#GPP_eol_priorities_1-6" />
+                      </text>
+                      <statusCode code="completed" />
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_priorities_1-6" />
+                      </value>
+                    </observation>
+                  </component>
+                </organizer>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.5" extension="2016-07-01" />
+                  <id root="2046989E-289B-48A2-9864-C30D80B7D2E0" />
+                  <code code="75776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family" />
+                  <text>
+                    <reference value="#GPP_eol_3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <entryRelationship typeCode="REFR">
+                    <procedure classCode="PROC" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+                      <id root="8885FE83-1AA5-492E-BB4F-49309DB65801" />
+                      <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                        <originalText>
+                          <reference value="#GPP_eol_3_I" />
+                        </originalText>
+                      </code>
+                      <statusCode code="completed" />
+                    </procedure>
+                  </entryRelationship>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_3_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.5" extension="2016-07-01" />
+                  <id root="A4EC3546-FCB1-46FC-A2DF-1F90BC518B0E" />
+                  <code code="75777-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on terminal illness" />
+                  <text>
+                    <reference value="#GPP_eol_4" />
+                  </text>
+                  <statusCode code="completed" />
+                  <entryRelationship typeCode="REFR">
+                    <procedure classCode="PROC" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+                      <id root="721DBEDF-C5D4-4A67-BBA5-B10129BDCF10" />
+                      <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                        <originalText>
+                          <reference value="#GPP_eol_4_I" />
+                        </originalText>
+                      </code>
+                      <statusCode code="completed" />
+                    </procedure>
+                  </entryRelationship>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_4_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.5" extension="2016-07-01" />
+                  <id root="0A666769-154D-4185-A7F2-D0456FDF0BFC" />
+                  <code code="75778-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on irreversible debilitating illness" />
+                  <text>
+                    <reference value="#GPP_eol_6" />
+                  </text>
+                  <statusCode code="completed" />
+                  <entryRelationship typeCode="REFR">
+                    <procedure classCode="PROC" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+                      <id root="483E75B4-6063-4D46-A2D5-3C6B15B66996" />
+                      <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                        <originalText>
+                          <reference value="#GPP_eol_6_I" />
+                        </originalText>
+                      </code>
+                      <statusCode code="completed" />
+                    </procedure>
+                  </entryRelationship>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_6_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.5" extension="2016-07-01" />
+                  <id root="9749C56E-F8BF-4E74-A8B8-4753038DC7E6" />
+                  <code code="75779-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on CPR">
+                    <originalText>
+                      <reference value="#GPP_eol_8_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#GPP_eol_8" />
+                  </text>
+                  <statusCode code="completed" />
+                  <entryRelationship typeCode="REFR">
+                    <procedure classCode="PROC" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+                      <id root="4DD4ADF7-25EC-48EF-84D5-9EE3BA661A47" />
+                      <code code="89666000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="CPR">
+                        <originalText>
+                          <reference value="#GPP_eol_8_I" />
+                        </originalText>
+                      </code>
+                      <statusCode code="completed" />
+                    </procedure>
+                  </entryRelationship>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#GPP_eol_8_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="GOL">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.6" extension="2016-07-01" />
+                  <id root="45C3FF1C-48CA-4D2E-AEE1-2B7DB860D8D1" />
+                  <code code="75780-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on Final Days">
+                    <originalText>
+                      <reference value="#GPP_eol_10_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#GPP_eol_10" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#GPP_eol_10_A" />
+                  </value>
+                </observation>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <templateId root="2.16.840.1.113883.4.823.1.3.5" extension="2016-07-01" />
+              <code code="81337-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="GPP upon Death" />
+              <title mediaType="text/plain" representation="TXT" language="en-US">Goals, Preferences and Priorities upon Death</title>
+              <text><content ID="GPP_ud_1">
+            <content ID="GPP_ud_1_Q" styleCode="Bold">Consent to Donate</content><br />
+            <content ID="GPP_ud_1_A" styleCode="Answer">
+                I consent to donate the following organs and tissues:Heart, Kidneys, Eyes.
+                                                                            </content>
+        </content><br /><br />
+        <content ID="GPP_ud_2S">
+            <content ID="GPP_ud_2S_Q" styleCode="Bold">Here are some additional thoughts that I would like for my medical care team and my healthcare agent(s) to know about organ donation:</content><br />
+            <content ID="DonationStatement1">
+                <linkHtml href="DonationStatement.mp4">Link to Donation Statement</linkHtml>
+            </content>
+        </content><br /><br />
+        <content ID="GPP_ud_3">
+            <content ID="GPP_ud_3_Q" styleCode="Bold">Autopsy</content><br />
+                <content ID="GPP_ud_3_I" styleCode="Answer">I want an autopsy</content>
+                <content ID="GPP_ud_3_C" styleCode="Answer">if my doctor thinks it will help others.</content>
+                                                        </content><br /><br />
+        <content ID="GPP_ud_4S">
+            <content ID="GPP_ud_4S_Q" styleCode="Bold">Here are some additional thoughts that I would like for my medical care team and my healthcare agent(s) to know about autopsy:</content><br />
+            <content ID="AutopsyStatement1">
+                <linkHtml href="AutopsyStatement.pdf">Link to Autospy Statement</linkHtml>
+            </content>
+        </content><br /><br />
+        <content ID="GPP_ud_5">
+            <content ID="GPP_ud_5_Q" styleCode="Bold">Here are my thoughts on funeral or burial plans:</content><br />
+            <content ID="GPP_ud_5_A" styleCode="Answer">
+                If I were to pass away:<br />
+                I have a plot. My wife has the details, also my secretary, Ms. Williams, will know.
+            </content>
+        </content><br /><br /></text>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.12" extension="2016-07-01" />
+                  <id root="684F7417-DF81-49AB-9888-538464BA65A3" />
+                  <code code="75781-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on Organ and Tissue Donation">
+                    <originalText>
+                      <reference value="#GPP_ud_1_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#GPP_ud_1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#GPP_ud_1_A" />
+                  </value>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.10" extension="2016-07-01" />
+                  <id root="16A4F5EF-7DFF-4305-8F6B-186EA3B7FE59" />
+                  <code code="75782-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on Autopsy">
+                    <originalText>
+                      <reference value="#GPP_ud_3_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#GPP_ud_3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#GPP_ud_3_I" />
+                  </value>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#GPP_ud_3_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.5" extension="2016-07-01" />
+                  <id root="5ECDBAC9-FDA2-48C0-8AA7-FD16EF5EEBA9" />
+                  <code code="81356-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Death Arrangements">
+                    <originalText>
+                      <reference value="#GPP_ud_5_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#GPP_ud_5" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#GPP_ud_5_A" />
+                  </value>
+                </observation>
+              </entry>
+              <entry>
+                <act classCode="ACT" moodCode="EVN">
+                  <code code="75781-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on Organ and Tissue Donation">
+                    <originalText>
+                      <reference value="#GPP_ud_2S_Q" />
+                    </originalText>
+                  </code>
+                  <reference typeCode="SPRT">
+                    <externalDocument>
+                      <id root="879E7A28-9D2B-4A0D-B07E-692A1CA3D03F" />
+                      <text>
+                        <reference value="#DonationStatement1" />
+                      </text>
+                    </externalDocument>
+                  </reference>
+                </act>
+              </entry>
+              <entry>
+                <act classCode="ACT" moodCode="EVN">
+                  <code code="75782-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Thoughts on Autopsy">
+                    <originalText>
+                      <reference value="#GPP_ud_4S_Q" />
+                    </originalText>
+                  </code>
+                  <reference typeCode="SPRT">
+                    <externalDocument>
+                      <id root="91F546B5-83C2-4B1A-B468-AE94466012D8" />
+                      <text>
+                        <reference value="#AutopsyStatement1" />
+                      </text>
+                    </externalDocument>
+                  </reference>
+                </act>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <templateId root="2.16.840.1.113883.4.823.1.3.6" extension="2016-07-01" />
+              <code code="81338-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="GPP for care experience" />
+              <title mediaType="text/plain" representation="TXT" language="en-US">My Thoughts</title>
+              <text><content styleCode="Italic">
+        MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Ketema Jawara Harris appear here. For a complete list of questions in My Thoughts, please visit www.MyDirectives.com.
+    </content><br /><br />
+    <content styleCode="Bold">
+        In case I’m being cared for by a person(s) who doesn't know me very well, I’d like my following thoughts to be known.
+    </content><br /><br />
+        <content ID="ME_1">
+            <content ID="ME_1_Q" styleCode="Bold">
+                My likes / joys:
+            </content>
+            <content>
+                Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:
+            </content><br />
+            <content ID="ME_1_A" styleCode="Answer">
+                Like Bach, especially the cantatas.  St. Martin in the Fields.
+            </content>
+        </content><br /><br />
+        <content ID="ME_1S">
+            <content ID="ME_1S_Q" styleCode="Bold">
+                My likes / joys:
+            </content>
+            <content>
+                Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:
+            </content><br />
+            <content ID="MyLikesStatement1">
+                <linkHtml href="MyLikesStatement.mp4">Link to "My likes" Statement</linkHtml>
+            </content>
+        </content><br /><br />
+        <content ID="ME_3">
+            <content ID="ME_3_Q" styleCode="Bold">
+                How to care for me:
+            </content>
+            <content>
+                If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:
+            </content><br />
+            <content ID="ME_3_A" styleCode="Answer">
+                I don’t like being treated like an object. I would like to be greeted like a person before working on me.
+            </content>
+        </content><br /><br />
+        <content ID="ME_5">
+            <content ID="ME_5_Q" styleCode="Bold">
+                Please attempt to notify someone from my religion at the following phone number:
+            </content>
+            <content>
+                If I have included one
+            </content><br />
+            <content ID="ME_5_A" styleCode="Answer">
+                Not Religious
+            </content>
+        </content><br /><br />
+        <content ID="ME_6">
+            <content ID="ME_6_Q" styleCode="Bold">
+                My unfinished business:
+            </content>
+            <content ID="ME_6_C">
+                If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:
+            </content><br />
+            <content ID="ME_6_I" styleCode="Answer">
+                I am awaiting a message from the Nobel Prize Committee. Please keep me alive if I look promising this year.
+            </content>
+        </content><br /><br />
+        <content ID="ME_7S">
+            <content ID="ME_7S_Q" styleCode="Bold">
+                Laughter:
+            </content>
+            <content>
+                These are some of my fondest memories from life that have always brought a smile to my face or made me laugh:
+            </content><br />
+            <content ID="LaugtherStatement1">
+                <linkHtml href="LaugtherStatement.jpg">Link to "Laughter" Statement</linkHtml>
+            </content>
+        </content><br /><br /></text>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.10" extension="2016-07-01" />
+                  <id root="9371E368-09CD-4A34-BE16-456CCD39E011" />
+                  <code code="81360-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="My likes and joys">
+                    <originalText>
+                      <reference value="#ME_1_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#ME_1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#ME_1_A" />
+                  </value>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.10" extension="2016-07-01" />
+                  <id root="AE207D4D-CE66-4543-9E9A-51B5855156F5" />
+                  <code code="81380-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Goals, preferences, and priorities for care experience">
+                    <originalText>
+                      <reference value="#ME_3_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#ME_3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#ME_3_A" />
+                  </value>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="INT">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.10" extension="2016-07-01" />
+                  <id root="494D63F1-6A06-4885-8283-6E9270A733B9" />
+                  <code code="81365-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Religious affiliation contact to notify">
+                    <originalText>
+                      <reference value="#ME_5_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#ME_5" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#ME_5_A" />
+                  </value>
+                </observation>
+              </entry>
+              <entry>
+                <observation classCode="OBS" moodCode="GOL">
+                  <templateId root="2.16.840.1.113883.4.823.1.4.10" extension="2016-07-01" />
+                  <id root="C8F95592-7A16-490F-9ACD-9029B19D56EC" />
+                  <code code="81366-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Unfinished business">
+                    <originalText>
+                      <reference value="#ME_6_Q" />
+                    </originalText>
+                  </code>
+                  <text>
+                    <reference value="#ME_6" />
+                  </text>
+                  <statusCode code="completed" />
+                  <value xsi:type="ED">
+                    <reference value="#ME_6_I" />
+                  </value>
+                  <precondition>
+                    <criterion>
+                      <value xsi:type="ED">
+                        <reference value="#ME_6_C" />
+                      </value>
+                    </criterion>
+                  </precondition>
+                </observation>
+              </entry>
+              <entry>
+                <act classCode="ACT" moodCode="EVN">
+                  <code code="81360-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="My likes and joys">
+                    <originalText>
+                      <reference value="#ME_1S_Q" />
+                    </originalText>
+                  </code>
+                  <reference typeCode="SPRT">
+                    <externalDocument>
+                      <id root="E549FD83-88EC-4E0F-8570-32BCFB89D42C" />
+                      <text>
+                        <reference value="#MyLikesStatement1" />
+                      </text>
+                    </externalDocument>
+                  </reference>
+                </act>
+              </entry>
+              <entry>
+                <act classCode="ACT" moodCode="EVN">
+                  <code code="81361-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Things that make me laugh">
+                    <originalText>
+                      <reference value="#ME_7S_Q" />
+                    </originalText>
+                  </code>
+                  <reference typeCode="SPRT">
+                    <externalDocument>
+                      <id root="78417A33-8CE9-480C-BCBC-977A862F6700" />
+                      <text>
+                        <reference value="#LaugtherStatement1" />
+                      </text>
+                    </externalDocument>
+                  </reference>
+                </act>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <templateId root="2.16.840.1.113883.4.823.1.3.7" extension="2016-07-01" />
+              <code code="81339-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Witnesses and Notary" />
+              <title mediaType="text/plain" representation="TXT" language="en-US">Witnesses and Notary</title>
+              <text><paragraph>I am emotionally and mentally competent to make this uADD.  I understand the purpose and effect of this uADD, I agree with everything that is written in this uADD, and I have made this uADD knowingly, willingly and after careful deliberation.</paragraph>
+
+
+<table>
+    <thead>
+        <tr styleCode="Bold">
+            <td>Data Type</td>
+            <td>Information</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Signature:</td>
+            <td>Ketema Harris</td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td>03/8/2018</td>
+        </tr>
+    </tbody>
+</table><br />
+
+
+<br />
+<content styleCode="Bold">
+    Statement of Witnesses
+</content><br /><br />
+<content>
+    I declare that the person who signed this uADD, or who asked another to sign this uADD on his/her behalf, is the individual identified in the document, and he/she did so in my presence or otherwise provided satisfactory proof to me of his/her identity. I believe him/her to be of sound mind and at least 18 years of age. I personally witnessed him/her sign this document or ask the person indicated to do so, or I received proof of his/her identity that I believe is adequate, and I believe that he/she did so voluntarily.  By signing this document as a witness, I certify that I am:
+</content><br /><br />
+<list>
+    <item>At least 18 years of age.</item>
+    <item>Not related to the person signing this document by blood, marriage or adoption.</item>
+    <item>Not a healthcare agent appointed by the person signing this document.</item>
+    <item>Not directly financially responsible for that person’s healthcare.</item>
+    <item>Not a healthcare provider directly serving the person at this time.</item>
+    <item>Not an employee (other than a social worker or chaplain), officer, director, or partner of a healthcare provider (or any parent organization of such healthcare provider) directly serving the person at this time.</item>
+    <item>Not aware that I am entitled to or have a claim against the person’s estate.</item>
+</list><br /><br />
+
+    <table>
+        <thead>
+            <tr styleCode="Bold">
+                <td>Data Type</td>
+                <td>Information</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Witness Number:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Signature:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table><br />
+        <br /><br /><br /></text>
+            </section>
+          </component>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
