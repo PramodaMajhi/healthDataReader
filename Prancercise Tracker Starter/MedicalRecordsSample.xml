@@ -28,12 +28,12 @@
       </addr>
       <telecom value="tel:+12145859878" use="HP" />
       <telecom value="tel:+12145338525" use="MC" />
-      <telecom value="mailto:ketema.harris@blueshieldca.com" />
+      <telecom value="mailto:patrick@example.com" />
       <patient classCode="PSN" determinerCode="INSTANCE">
         <name use="L">
-          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Patrick</given>
           <given partType="GIV">Jawara</given>
-          <family partType="FAM">Harris</family>
+          <family partType="FAM">LastName</family>
         </name>
         <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male" />
         <birthTime value="19770930" />
@@ -59,19 +59,19 @@
       <id root="2.16.840.1.113883.4.823.1" extension="20120213211501-219" />
       <code code="ONESELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Self" />
       <addr use="HP">
-        <streetAddressLine partType="SAL">456 Vaultina Dr.</streetAddressLine>
+        <streetAddressLine partType="SAL">1234 Main Street</streetAddressLine>
         <city partType="CTY">Dallas</city>
         <state partType="STA">TX</state>
         <postalCode partType="ZIP">75219</postalCode>
         <country partType="CNT">US</country>
       </addr>
-      <telecom value="tel:+12145859878" use="HP" />
-      <telecom value="tel:+12145338525" use="MC" />
+      <telecom value="tel:+5301234567" use="HP" />
+      <telecom value="tel:+5301234567" use="MC" />
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name use="L">
-          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Patrick</given>
           <given partType="GIV">Jawara</given>
-          <family partType="FAM">Harris</family>
+          <family partType="FAM">LastName</family>
         </name>
       </assignedPerson>
     </assignedAuthor>
@@ -81,7 +81,7 @@
     <assignedAuthor>
       <id root="2.16.840.1.113883.4.6" extension="66660" />
       <addr>
-        <streetAddressLine partType="SAL">P.O. Box 832624</streetAddressLine>
+        <streetAddressLine partType="SAL">P.O. Box 12345</streetAddressLine>
         <city partType="CTY">Richardson</city>
         <state partType="STA">TX</state>
         <postalCode partType="ZIP">75083</postalCode>
@@ -121,12 +121,12 @@
       </addr>
       <telecom value="tel:+12145859878" use="HP" />
       <telecom value="tel:+12145338525" use="MC" />
-      <telecom value="mailto:Ketemab@testaccount.edu" />
+      <telecom value="mailto:Patrick@testaccount.edu" />
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name use="L">
-          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Patrick</given>
           <given partType="GIV">Jawara</given>
-          <family partType="FAM">Harris</family>
+          <family partType="FAM">LastName</family>
         </name>
       </assignedPerson>
     </assignedEntity>
@@ -164,12 +164,12 @@
       </addr>
       <telecom value="tel:+12145859878" use="HP" />
       <telecom value="tel:+12145338525" use="MC" />
-      <telecom value="mailto:Ketemab@testaccount.edu" />
+      <telecom value="mailto:Patrick@testaccount.edu" />
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name use="L">
-          <given partType="GIV">Ketema</given>
+          <given partType="GIV">Patrick</given>
           <given partType="GIV">Jawara</given>
-          <family partType="FAM">Harris</family>
+          <family partType="FAM">LastName</family>
         </name>
       </assignedPerson>
     </assignedEntity>
@@ -180,10 +180,10 @@
       <code>
         <originalText mediaType="text/plain" language="en-US">Friend</originalText>
       </code>
-      <telecom value="mailto:zuckerjeff@gmail.com" use="HP" />
+      <telecom value="mailto:patrick@example.com" use="HP" />
       <associatedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>
-          <given partType="GIV">Jeff Zucker</given>
+          <given partType="GIV">Patrick Zucker</given>
         </name>
       </associatedPerson>
     </associatedEntity>
@@ -312,7 +312,7 @@
                       <code>
                         <originalText mediaType="text/plain" language="en-US">Friend</originalText>
                       </code>
-                      <telecom value="mailto:zuckerjeff@gmail.com" use="HP" />
+                      <telecom value="mailto:patrick@example.com" use="HP" />
                       <playingEntity>
                         <code code="63161005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Principle">
                           <originalText>
@@ -320,7 +320,7 @@
                           </originalText>
                         </code>
                         <name>
-                          <given partType="GIV">Jeff Zucker</given>
+                          <given partType="GIV">Patrick Example</given>
                         </name>
                       </playingEntity>
                     </participantRole>
@@ -1030,7 +1030,7 @@ At home.I would like to receive hospice care at home if possible.               
               <code code="81338-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="GPP for care experience" />
               <title mediaType="text/plain" representation="TXT" language="en-US">My Thoughts</title>
               <text><content styleCode="Italic">
-        MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Ketema Jawara Harris appear here. For a complete list of questions in My Thoughts, please visit www.MyDirectives.com.
+        MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Patrick Jawara LastName appear here. For a complete list of questions in My Thoughts, please visit www.MyDirectives.com.
     </content><br /><br />
     <content styleCode="Bold">
         In case I’m being cared for by a person(s) who doesn't know me very well, I’d like my following thoughts to be known.
@@ -1234,7 +1234,7 @@ At home.I would like to receive hospice care at home if possible.               
     <tbody>
         <tr>
             <td>Signature:</td>
-            <td>Ketema Harris</td>
+            <td>Patrick LastName</td>
         </tr>
         <tr>
             <td>Date:</td>

@@ -34,8 +34,12 @@ import UIKit
 
 class MasterViewController: UITableViewController {
   
-  private let authorizeHealthKitSection = 2
-  
+    private enum Section: Int {
+        case dummy1
+        case dummy2
+        case authorizeHealthKitSection
+    }
+    
   private func authorizeHealthKit() {
     HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
         
@@ -56,11 +60,17 @@ class MasterViewController: UITableViewController {
     }
   }
   
-  // MARK: - UITableView Delegate
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    if indexPath.section == authorizeHealthKitSection {
-      authorizeHealthKit()
-    }
-  }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let section = Section(rawValue: indexPath.section) else {
+            fatalError("A Section should map to the index path's section")
+        }
+        
+        switch section {
+            case .authorizeHealthKitSection:
+                authorizeHealthKit()
+        default: break
+        }
+    }    
+  
 }

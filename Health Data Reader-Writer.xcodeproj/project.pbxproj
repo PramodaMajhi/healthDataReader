@@ -25,6 +25,7 @@
 		AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EAC071EAEA8E5002DD041 /* Workout.swift */; };
 		ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */; };
 		ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF4F9241EB215DE0031154C /* LaunchScreen.xib */; };
+		CD686600210F9C0C0018A915 /* SummaryOfCare.xml in Resources */ = {isa = PBXBuildFile; fileRef = CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		AC8EAC071EAEA8E5002DD041 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = "Prancercise Tracker/Workout.swift"; sourceTree = SOURCE_ROOT; };
 		ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = SOURCE_ROOT; };
 		ACF4F9251EB215DE0031154C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Prancercise Tracker/Base.lproj/LaunchScreen.xib"; sourceTree = SOURCE_ROOT; };
+		CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SummaryOfCare.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				AC8EABFB1EAEA8B2002DD041 /* Main.storyboard */,
 				ACF4F9241EB215DE0031154C /* LaunchScreen.xib */,
 				04671704207CDA79009611D9 /* MedicalRecordsSample.xml */,
+				CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */,
 				AC8EAC011EAEA8C8002DD041 /* Info.plist */,
 			);
 			name = "Health Data Reader-Writer";
@@ -207,6 +210,7 @@
 				ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */,
 				AC8EABFD1EAEA8B2002DD041 /* Main.storyboard in Resources */,
 				AC8EABE61EAEA833002DD041 /* Assets.xcassets in Resources */,
+				CD686600210F9C0C0018A915 /* SummaryOfCare.xml in Resources */,
 				04671705207CDA79009611D9 /* MedicalRecordsSample.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

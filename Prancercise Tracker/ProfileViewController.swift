@@ -37,7 +37,7 @@ class ProfileViewController: UITableViewController {
     case ageSexBloodType
     case weightHeightBMI
     case readHealthKitData
-    case saveBMI
+    case importHealthRecord
   }
   
   private enum ProfileDataError: Error {
@@ -157,14 +157,7 @@ class ProfileViewController: UITableViewController {
     }
   }
   
-  private func saveBodyMassIndexToHealthKit() {
-    //guard let bodyMassIndex = userHealthProfile.bodyMassIndex else {
-    //    displayAlert(for: ProfileDataError.missingBodyMassIndex)
-    //    return
-    //}
-    
-    //ProfileDataStore.saveBodyMassIndexSample(bodyMassIndex: bodyMassIndex,
-    //                                         date: Date())
+  private func importHealthRecord() {
     ProfileDataStore.saveCDAToHealthKit()
   }
   
@@ -188,10 +181,11 @@ class ProfileViewController: UITableViewController {
     }
     
     switch section {
-    case .saveBMI:
-      saveBodyMassIndexToHealthKit()
     case .readHealthKitData:
-      updateHealthInfo()
+        updateHealthInfo()
+    case .importHealthRecord:
+      importHealthRecord()
+    
     default: break
     }
   }
