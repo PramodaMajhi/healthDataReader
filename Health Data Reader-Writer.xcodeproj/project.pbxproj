@@ -26,6 +26,9 @@
 		ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */; };
 		ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF4F9241EB215DE0031154C /* LaunchScreen.xib */; };
 		CD686600210F9C0C0018A915 /* SummaryOfCare.xml in Resources */ = {isa = PBXBuildFile; fileRef = CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */; };
+		CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA421112C0F00A7518B /* HealthDataUploader.swift */; };
+		CD791EA72111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */; };
+		CD791EA9211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = SOURCE_ROOT; };
 		ACF4F9251EB215DE0031154C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Prancercise Tracker/Base.lproj/LaunchScreen.xib"; sourceTree = SOURCE_ROOT; };
 		CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SummaryOfCare.xml; sourceTree = "<group>"; };
+		CD791EA421112C0F00A7518B /* HealthDataUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataUploader.swift; sourceTree = "<group>"; };
+		CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKFitzpatrickSkinType+StringRepresentation.swift"; sourceTree = "<group>"; };
+		CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWheelchairUse+StringRepresentation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 				04671704207CDA79009611D9 /* MedicalRecordsSample.xml */,
 				CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */,
 				AC8EAC011EAEA8C8002DD041 /* Info.plist */,
+				CD791EA421112C0F00A7518B /* HealthDataUploader.swift */,
 			);
 			name = "Health Data Reader-Writer";
 			path = "Prancercise Tracker Starter";
@@ -138,6 +145,8 @@
 			children = (
 				AC8EABF71EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift */,
 				AC8EABF81EAEA895002DD041 /* HKBloodType+StringRepresentation.swift */,
+				CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */,
+				CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */,
 			);
 			name = "HealthKit Extensions";
 			sourceTree = "<group>";
@@ -225,8 +234,11 @@
 				AC8EABFA1EAEA895002DD041 /* HKBloodType+StringRepresentation.swift in Sources */,
 				AC8EABF01EAEA855002DD041 /* WorkoutsTableViewController.swift in Sources */,
 				9F270C321EBE47EB0075412F /* WorkoutSession.swift in Sources */,
+				CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */,
 				AC8EABED1EAEA855002DD041 /* CreateWorkoutTableViewController.swift in Sources */,
 				AC8EABF21EAEA860002DD041 /* HealthKitSetupAssistant.swift in Sources */,
+				CD791EA9211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift in Sources */,
+				CD791EA72111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift in Sources */,
 				AC8EABF41EAEA86A002DD041 /* ProfileDataStore.swift in Sources */,
 				ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */,
 				AC8EABE81EAEA83F002DD041 /* AppDelegate.swift in Sources */,

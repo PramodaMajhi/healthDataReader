@@ -35,13 +35,15 @@ import UIKit
 class MasterViewController: UITableViewController {
   
     private enum Section: Int {
-        case dummy1
-        case dummy2
+        case viewHealthData
+        case spacer
         case authorizeHealthKitSection
+        case importHealthRecord
+        case uploadHealthRecord
     }
     
-  private func authorizeHealthKit() {
-    HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
+    private func authorizeHealthKit() {
+        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
         
         guard authorized else {
             
@@ -57,9 +59,18 @@ class MasterViewController: UITableViewController {
         }
         
         print("HealthKit Successfully Authorized.")
+        }
     }
-  }
   
+    private func importHealthRecord() {
+        ProfileDataStore.saveCDAToHealthKit()        
+    }
+    
+    private func uploadHealthRecord() {
+        let hdu = HealthDataUploader()
+        hdu.getData()        
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let section = Section(rawValue: indexPath.section) else {
@@ -69,7 +80,11 @@ class MasterViewController: UITableViewController {
         switch section {
             case .authorizeHealthKitSection:
                 authorizeHealthKit()
-        default: break
+            case .importHealthRecord:
+                importHealthRecord()
+            case .uploadHealthRecord:
+                uploadHealthRecord()
+            default: break
         }
     }    
   

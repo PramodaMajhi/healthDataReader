@@ -37,7 +37,6 @@ class ProfileViewController: UITableViewController {
     case ageSexBloodType
     case weightHeightBMI
     case readHealthKitData
-    case importHealthRecord
   }
   
   private enum ProfileDataError: Error {
@@ -65,6 +64,7 @@ class ProfileViewController: UITableViewController {
     loadAndDisplayAgeSexAndBloodType()
     loadAndDisplayMostRecentWeight()
     loadAndDisplayMostRecentHeight()
+    print("data read and displayed")
   }
   
   private func loadAndDisplayAgeSexAndBloodType() {
@@ -76,36 +76,6 @@ class ProfileViewController: UITableViewController {
         updateLabels()
     } catch let error {
         self.displayAlert(for: error)
-    }
-  }
-  
-  private func updateLabels() {
-    if let age = userHealthProfile.age {
-        ageLabel.text = "\(age)"
-    }
-    
-    if let biologicalSex = userHealthProfile.biologicalSex {
-        biologicalSexLabel.text = biologicalSex.stringRepresentation
-    }
-    
-    if let bloodType = userHealthProfile.bloodType {
-        bloodTypeLabel.text = bloodType.stringRepresentation
-    }
-    
-    if let weight = userHealthProfile.weightInKilograms {
-        let weightFormatter = MassFormatter()
-        weightFormatter.isForPersonMassUse = true
-        weightLabel.text = weightFormatter.string(fromKilograms: weight)
-    }
-    
-    if let height = userHealthProfile.heightInMeters {
-        let heightFormatter = LengthFormatter()
-        heightFormatter.isForPersonHeightUse = true
-        heightLabel.text = heightFormatter.string(fromMeters: height)
-    }
-    
-    if let bodyMassIndex = userHealthProfile.bodyMassIndex {
-        bodyMassIndexLabel.text = String(format: "%.02f", bodyMassIndex)
     }
   }
   
@@ -157,6 +127,36 @@ class ProfileViewController: UITableViewController {
     }
   }
   
+    private func updateLabels() {
+        if let age = userHealthProfile.age {
+            ageLabel.text = "\(age)"
+        }
+        
+        if let biologicalSex = userHealthProfile.biologicalSex {
+            biologicalSexLabel.text = biologicalSex.stringRepresentation
+        }
+        
+        if let bloodType = userHealthProfile.bloodType {
+            bloodTypeLabel.text = bloodType.stringRepresentation
+        }
+        
+        if let weight = userHealthProfile.weightInKilograms {
+            let weightFormatter = MassFormatter()
+            weightFormatter.isForPersonMassUse = true
+            weightLabel.text = weightFormatter.string(fromKilograms: weight)
+        }
+        
+        if let height = userHealthProfile.heightInMeters {
+            let heightFormatter = LengthFormatter()
+            heightFormatter.isForPersonHeightUse = true
+            heightLabel.text = heightFormatter.string(fromMeters: height)
+        }
+        
+        if let bodyMassIndex = userHealthProfile.bodyMassIndex {
+            bodyMassIndexLabel.text = String(format: "%.02f", bodyMassIndex)
+        }
+    }
+    
   private func importHealthRecord() {
     ProfileDataStore.saveCDAToHealthKit()
   }
@@ -183,9 +183,6 @@ class ProfileViewController: UITableViewController {
     switch section {
     case .readHealthKitData:
         updateHealthInfo()
-    case .importHealthRecord:
-      importHealthRecord()
-    
     default: break
     }
   }

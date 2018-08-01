@@ -31,10 +31,10 @@
 import HealthKit
 
 class ProfileDataStore {
-    class func getAgeSexAndBloodType() throws -> (age: Int,
-        biologicalSex: HKBiologicalSex,
-        bloodType: HKBloodType) {
-            
+    
+    
+    class func getAgeSexAndBloodType() throws -> (age: Int, biologicalSex: HKBiologicalSex, bloodType: HKBloodType) {
+        
             let healthKitStore = HKHealthStore()
             
             do {
