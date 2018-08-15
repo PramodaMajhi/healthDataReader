@@ -63,8 +63,8 @@ Notes:
 * Attributes are things that seldom or never change. Measurements change more frequently, so it's important to capture the date and time that measurements were taken. Healthkit include a start time and end time for the measurement capture, so both are sent. They are usually the same.
 * The app will always send the latest measurement for each measurement type, even if it has already sent it before.
 * The app will not send previous measurements for each measurement type, even if they have never been sent.
-* Each measurment includes a UUID, so it should be easy for a server to reject measurements it has already stored.
-* All of this is straightforward to change. For example, the app could keep track of the timestamp of the last measurement it sent for each measurement type.
+* Each measurement includes a UUID, so it should be easy for a server to reject measurements it has already stored.
+* All of this is straightforward to change. For example, the app could keep track of the timestamp of the last measurement it sent for each measurement type and then send all of the new ones for each measurement type.
 
 ## REST Web Server in a few simple steps
 
