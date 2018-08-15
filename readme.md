@@ -60,11 +60,11 @@ It was modified by Patrick to:
 
 Notes:
 * Member ID is fabricated. Presumable, if a member had authenticated, we would have their ID.
-* Attributes are things that seldom or never change. Measurement change more frequently, so it's improtant to capture the date that measurement was taken.
-* The app will always send the latest measurement, even if it has already sent it before.
-* The app will not send previous measurements, even if they have never been sent.
-* Each measurment includes a UUID, so it should be easy for a server to reject measurements it has already seen.
-* All of this is straightforward to change. For example, the app could keep track of the timestamp of the last measurement it send for each measurement type.
+* Attributes are things that seldom or never change. Measurements change more frequently, so it's important to capture the date and time that measurements were taken. Healthkit include a start time and end time for the measurement capture, so both are sent. They are usually the same.
+* The app will always send the latest measurement for each measurement type, even if it has already sent it before.
+* The app will not send previous measurements for each measurement type, even if they have never been sent.
+* Each measurment includes a UUID, so it should be easy for a server to reject measurements it has already stored.
+* All of this is straightforward to change. For example, the app could keep track of the timestamp of the last measurement it sent for each measurement type.
 
 ## REST Web Server in a few simple steps
 
@@ -89,6 +89,8 @@ Here are steps to create a really simple REST server to test the upload:
 ```
 5. Run `npm start`
 6. Open [localhost:3000/healthData](http://localhost:3000/healthData)
-7. Now run the HealthKit app. Assuming you have given the required permissions, entered some attributes and some measurements, click on the "Upload Health Data" button. This should upload the data to the server, where it will be added to the `db.json` file.
+7. Now run the HealthKit app. (Assuming you have given the required permissions, entered some attributes and some measurements). Click on the "Upload Health Data" button. This should upload the data to the server, where it will be added to the `db.json` file.
 8. Refresh the web page and you should see the data.
+
+-end
 
