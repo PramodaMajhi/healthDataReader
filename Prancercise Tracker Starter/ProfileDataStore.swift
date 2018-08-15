@@ -117,25 +117,7 @@ class ProfileDataStore {
         }
     }
     
-    class func saveCDAToHealthKit() {
-        /*
-         Load CDA from `Bundle`, transform into `Data` object, then create
-         sample and save into HealthKit.
-         */
-        if let cdaURL = Bundle.main.url(forResource: "SummaryOfCare", withExtension: "xml") {
-            let cdaData = try! Data(contentsOf: cdaURL)
-            let date = Date()
-            let cdaSample = try! HKCDADocumentSample(data: cdaData, start: date, end: date, metadata: nil)
-            
-            HKHealthStore().save(cdaSample) { success, error in
-                if let error = error {
-                    print("Error Saving Health Records: \(error.localizedDescription)")
-                } else {
-                    print("Successfully saved Health Records")
-                }
-            }
-        }
-    }
+    
     
 }
 

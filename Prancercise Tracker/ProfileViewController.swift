@@ -68,15 +68,11 @@ class ProfileViewController: UITableViewController {
   }
   
   private func loadAndDisplayAgeSexAndBloodType() {
-    do {
-        let userAgeSexAndBloodType = try ProfileDataStore.getAgeSexAndBloodType()
-        userHealthProfile.age = userAgeSexAndBloodType.age
-        userHealthProfile.biologicalSex = userAgeSexAndBloodType.biologicalSex
-        userHealthProfile.bloodType = userAgeSexAndBloodType.bloodType
-        updateLabels()
-    } catch let error {
-        self.displayAlert(for: error)
-    }
+    let userAgeSexAndBloodType = ProfileDataStore.getAgeSexAndBloodType()
+    userHealthProfile.age = userAgeSexAndBloodType.age
+    userHealthProfile.biologicalSex = userAgeSexAndBloodType.biologicalSex
+    userHealthProfile.bloodType = userAgeSexAndBloodType.bloodType
+    updateLabels()
   }
   
   private func loadAndDisplayMostRecentHeight() {
@@ -157,10 +153,7 @@ class ProfileViewController: UITableViewController {
         }
     }
     
-  private func importHealthRecord() {
-    ProfileDataStore.saveCDAToHealthKit()
-  }
-  
+ 
   private func displayAlert(for error: Error) {
     
     let alert = UIAlertController(title: nil,

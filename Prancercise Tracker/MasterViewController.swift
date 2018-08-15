@@ -39,6 +39,7 @@ class MasterViewController: UITableViewController {
         case spacer
         case authorizeHealthKitSection
         case importHealthRecord
+        case viewHealthRecords
         case uploadHealthRecord
     }
     
@@ -63,12 +64,18 @@ class MasterViewController: UITableViewController {
     }
   
     private func importHealthRecord() {
-        ProfileDataStore.saveCDAToHealthKit()        
+        DocumentDataStore.saveCDAToHealthKit()
+    }
+    private func viewHealthRecords() {
+        DocumentDataStore.getMostRecentDocument { (count, error) in
+            
+            return nil
+        }
     }
     
     private func uploadHealthRecord() {
         let hdu = HealthDataUploader()
-        hdu.getData()        
+        hdu.getDataAndUpload()       
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -82,6 +89,8 @@ class MasterViewController: UITableViewController {
                 authorizeHealthKit()
             case .importHealthRecord:
                 importHealthRecord()
+            case .viewHealthRecords:
+                viewHealthRecords()
             case .uploadHealthRecord:
                 uploadHealthRecord()
             default: break

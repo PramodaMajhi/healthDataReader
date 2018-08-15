@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileDataStore.swift"
-            timestampString = "554786084.409344"
+            timestampString = "554930969.157419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "saveBodyMassIndexSample(bodyMassIndex:date:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileDataStore.swift"
-            timestampString = "554786084.409798"
+            timestampString = "554930969.1578079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131">
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "saveCDAToHealthKit()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,11 +68,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileDataStore.swift"
-            timestampString = "554786084.409914"
+            timestampString = "554930969.157897"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137">
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "saveCDAToHealthKit()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,11 +84,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileDataStore.swift"
-            timestampString = "554786084.41002"
+            timestampString = "554930969.157972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140">
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "saveCDAToHealthKit()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,12 +100,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileDataStore.swift"
-            timestampString = "554786084.410133"
+            timestampString = "554930969.158044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "saveBodyMassIndexSample(bodyMassIndex:date:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getMostRecentSample(for:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileViewController.swift"
-            timestampString = "554783834.5619251"
+            timestampString = "554945637.381337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "loadAndDisplayMostRecentHeight()"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileViewController.swift"
-            timestampString = "554783834.56197"
+            timestampString = "554945637.381425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "loadAndDisplayMostRecentHeight()"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,11 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileViewController.swift"
-            timestampString = "554783834.56201"
+            timestampString = "554945637.381487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "loadAndDisplayMostRecentHeight()"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,11 +164,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileDataStore.swift"
-            timestampString = "554786084.41027"
+            timestampString = "554930969.1585619"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139">
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "saveCDAToHealthKit()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -172,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileViewController.swift"
-            timestampString = "554783834.5621049"
+            timestampString = "554945637.381549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "displayAlert(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -188,11 +196,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/MasterViewController.swift"
-            timestampString = "554786084.4103889"
+            timestampString = "554945637.381613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -204,11 +212,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/MasterViewController.swift"
-            timestampString = "554786084.410632"
+            timestampString = "554945637.3816791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "importHealthRecord()"
             landmarkType = "7">
          </BreakpointContent>
@@ -220,11 +228,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/MasterViewController.swift"
-            timestampString = "554786084.41073"
+            timestampString = "554945637.381739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -236,7 +244,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/ProfileViewController.swift"
-            timestampString = "554783834.562269"
+            timestampString = "554945637.381797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -252,12 +260,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/MasterViewController.swift"
-            timestampString = "554786084.410833"
+            timestampString = "554945637.381855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "uploadHealthRecord()"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "viewHealthRecords()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -268,12 +276,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker/MasterViewController.swift"
-            timestampString = "554786084.410924"
+            timestampString = "554945637.381912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "uploadHealthRecord()"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "MasterViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker Starter/HealthDataUploader.swift"
+            timestampString = "555371546.800096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "getDataAndUpload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -284,12 +308,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker Starter/HealthDataUploader.swift"
-            timestampString = "554786084.411013"
+            timestampString = "555371546.800644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "getData()"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "getDataAndUpload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -300,12 +324,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker Starter/HealthDataUploader.swift"
-            timestampString = "554786084.411652"
+            timestampString = "555371546.8010499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "getData()"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "getDataAndUpload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -316,12 +340,284 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker Starter/HealthDataUploader.swift"
-            timestampString = "554786084.412051"
+            timestampString = "555371546.801385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "getData()"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "getDataAndUpload()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker/ProfileViewController.swift"
+            timestampString = "554945637.3833719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "loadAndDisplayMostRecentHeight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker/ProfileViewController.swift"
+            timestampString = "554945637.383438"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "loadAndDisplayMostRecentWeight()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Health_Data_Reader_Writer.ProfileViewController.(loadAndDisplayMostRecentWeight in _86ABB3DE4DFE0C76D5F31A379AD9FDF9)() -&gt; ()"
+                  moduleName = "Health Data Reader-Writer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/dev/apple/HealthDataReaderWriter/Prancercise%20Tracker/ProfileViewController.swift"
+                  timestampString = "554928462.919582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "170">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.HKQuantitySample&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Health_Data_Reader_Writer.ProfileViewController.(loadAndDisplayMostRecentWeight in _86ABB3DE4DFE0C76D5F31A379AD9FDF9)() -&gt; ()"
+                  moduleName = "Health Data Reader-Writer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/dev/apple/HealthDataReaderWriter/Prancercise%20Tracker/ProfileViewController.swift"
+                  timestampString = "554928462.922466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker/ProfileViewController.swift"
+            timestampString = "554945637.383496"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "loadAndDisplayMostRecentHeight()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Health_Data_Reader_Writer.ProfileViewController.(loadAndDisplayMostRecentHeight in _86ABB3DE4DFE0C76D5F31A379AD9FDF9)() -&gt; ()"
+                  moduleName = "Health Data Reader-Writer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/dev/apple/HealthDataReaderWriter/Prancercise%20Tracker/ProfileViewController.swift"
+                  timestampString = "554945562.624449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "170">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.HKQuantitySample&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Health_Data_Reader_Writer.ProfileViewController.(loadAndDisplayMostRecentHeight in _86ABB3DE4DFE0C76D5F31A379AD9FDF9)() -&gt; ()"
+                  moduleName = "Health Data Reader-Writer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/dev/apple/HealthDataReaderWriter/Prancercise%20Tracker/ProfileViewController.swift"
+                  timestampString = "554945562.6284291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker/ProfileViewController.swift"
+            timestampString = "554945637.383553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "loadAndDisplayMostRecentWeight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker/ProfileViewController.swift"
+            timestampString = "554945637.3836091"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker/ProfileViewController.swift"
+            timestampString = "554945637.383665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "updateHealthInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker Starter/DocumentDataStore.swift"
+            timestampString = "554945637.383725"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getMostRecentDocument(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker Starter/DocumentDataStore.swift"
+            timestampString = "554945637.383785"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getMostRecentDocument(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker Starter/DocumentDataStore.swift"
+            timestampString = "554945637.383841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getMostRecentDocument(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker Starter/DocumentDataStore.swift"
+            timestampString = "554945637.383896"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getMostRecentDocument(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKDocumentQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKDocumentSample&gt;&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Health_Data_Reader_Writer.DocumentDataStore.getMostRecentDocument(completion: (Swift.Optional&lt;Swift.Int&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "Health Data Reader-Writer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/dev/apple/HealthDataReaderWriter/Prancercise%20Tracker%20Starter/DocumentDataStore.swift"
+                  timestampString = "555371546.927116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (__C.HKDocumentQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKDocumentSample&gt;&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Health_Data_Reader_Writer.DocumentDataStore.getMostRecentDocument(completion: (Swift.Optional&lt;Swift.Int&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "Health Data Reader-Writer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/dev/apple/HealthDataReaderWriter/Prancercise%20Tracker%20Starter/DocumentDataStore.swift"
+                  timestampString = "555371546.929401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prancercise Tracker Starter/HealthDataUploader.swift"
+            timestampString = "555371546.801904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "getDataAndUpload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -332,12 +628,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prancercise Tracker Starter/HealthDataUploader.swift"
-            timestampString = "554786084.412428"
+            timestampString = "555371546.802253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "getData()"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "getDataAndUpload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

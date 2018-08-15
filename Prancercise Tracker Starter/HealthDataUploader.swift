@@ -11,32 +11,36 @@ import Foundation
 import UIKit
 import HealthKit
 
-struct HealthData : Encodable {
-    let birthday : String?
-    let biologicalSex: String?
-    let bloodType : String?
-    let fitzpatrickSkinType : String?
-    let wheelchairUse : String?
-    var heightInMeters: String?
-    var weightInKilograms: String?
-    
-    init(birthday : DateComponents?, biologicalSex: HKBiologicalSex?, bloodType : HKBloodType?, fitzpatrickSkinType : HKFitzpatrickSkinType?, wheelchairUse : HKWheelchairUse? ) {
-        let formatter = ISO8601DateFormatter()
-        formatter.formatOptions = [.withFullDate]
-        self.birthday = formatter.string(from: birthday!.date!)
-        
-        self.biologicalSex = biologicalSex!.stringRepresentation
-        self.bloodType = bloodType!.stringRepresentation
-        self.fitzpatrickSkinType = fitzpatrickSkinType!.stringRepresentation
-        self.wheelchairUse = wheelchairUse!.stringRepresentation
-    }
+struct Attribute : Encodable {
+    let attributeType: String?
+    let attributeValue: String?
 }
 
+struct Measurement : Encodable {
+    let uuid: UUID?
+    let startDate: Date?
+    let endDate: Date?
+    let measurementType: String?
+    let measurementValue: String?
+    let unitOfMeasure: String?
+}
+
+struct HealthData : Encodable {
+    let memberId: String?
+    var attributes: [Attribute] = []
+    var measurements: [Measurement] = []
+    
+    init(memberId: String) {
+        self.memberId = memberId
+    }
+}
+    
 class HealthDataUploader {
     
-    var healthData : HealthData?
+    var healthData = HealthData(memberId: "XEA123456")
     
-    public func getData() {
+   
+    public func getDataAndUpload() {
         do {
             guard let heightSampleType = HKSampleType.quantityType(forIdentifier: .height) else {
                 print("Height Sample Type is no longer available in HealthKit")
@@ -48,7 +52,11 @@ class HealthDataUploader {
                 return
             }
             
-            self.healthData = try self.getValues()
+            //let formatter = ISO8601DateFormatter()
+            //self.healthData!.heightCaptureTimestamp = formatter.string(from: sample.endDate)
+            
+            let attributes = try self.getAttributes()
+            self.healthData.attributes.append(contentsOf: attributes)
             
             let taskGroup = DispatchGroup()
             
@@ -57,11 +65,16 @@ class HealthDataUploader {
                 defer {
                     taskGroup.leave()
                 }
-                guard let sample = sample else {
-                    return
+                if let sample = sample {
+                    let heightInMeters = sample.quantity.doubleValue(for: HKUnit.meter())
+                    let measurement = Measurement(uuid: sample.uuid,
+                                                  startDate: sample.startDate,
+                                                  endDate: sample.endDate,
+                                                  measurementType: "Height",
+                                                  measurementValue: String(format:"%.2f", heightInMeters),
+                                                  unitOfMeasure: "M")
+                    self.healthData.measurements.append(measurement)
                 }
-                let heightInMeters = sample.quantity.doubleValue(for: HKUnit.meter())
-                self.healthData!.heightInMeters = String(format:"%.2f", heightInMeters)
             }
             
             taskGroup.enter()
@@ -69,11 +82,16 @@ class HealthDataUploader {
                 defer {
                     taskGroup.leave()
                 }
-                guard let sample = sample else {
-                    return
+                if let sample = sample  {
+                    let weightInKilograms = sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo))
+                    let measurement = Measurement(uuid: sample.uuid,
+                                                  startDate: sample.startDate,
+                                                  endDate: sample.endDate,
+                                                  measurementType: "Weight",
+                                                  measurementValue: String(format:"%.2f", weightInKilograms),
+                                                  unitOfMeasure: "Kg")
+                    self.healthData.measurements.append(measurement)
                 }
-                let weightInKilograms = sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo))
-                self.healthData!.weightInKilograms = String(format:"%.2f", weightInKilograms)
             }
             
             taskGroup.notify(queue: DispatchQueue.main, work: DispatchWorkItem(block: {
@@ -95,6 +113,7 @@ class HealthDataUploader {
                 
                 // Now let's encode out Post struct into JSON data...
                 let encoder = JSONEncoder()
+                encoder.dateEncodingStrategy = .iso8601
                 do {
                     let jsonData = try encoder.encode(self.healthData)
                     // ... and set our request's HTTP body
@@ -128,26 +147,40 @@ class HealthDataUploader {
         }
     }
     
-    public func getValues() throws -> HealthData {
+    public func getAttributes() throws -> [Attribute] {
         let healthKitStore = HKHealthStore()
         
+        var attributes: [Attribute] = []
+        
         do {
-            let birthday = try healthKitStore.dateOfBirthComponents()
+            if let birthday = try? healthKitStore.dateOfBirthComponents() {
+                let formatter = ISO8601DateFormatter()
+                formatter.formatOptions = [.withFullDate]
+                let birthdayStr = formatter.string(from: birthday.date!)
+                attributes.append(Attribute(attributeType: "DOB", attributeValue: birthdayStr))
+            }
             
-            let biologicalSex = try healthKitStore.biologicalSex()
-            let uwBiologicalSex = biologicalSex.biologicalSex
+            if let biologicalSex = try? healthKitStore.biologicalSex() {
+                let uwBiologicalSex = biologicalSex.biologicalSex
+                attributes.append(Attribute(attributeType: "BiologicalSex", attributeValue: uwBiologicalSex.stringRepresentation))
+            }
             
-            let bloodType =  try healthKitStore.bloodType()
-            let uwBloodType = bloodType.bloodType
+            if let bloodType =  try? healthKitStore.bloodType() {
+                let uwBloodType = bloodType.bloodType
+                attributes.append(Attribute(attributeType: "BloodType", attributeValue: uwBloodType.stringRepresentation))
+            }
             
-            let fitzpatrickSkinType = try healthKitStore.fitzpatrickSkinType()
-            let uwFitzpatrickSkinType = fitzpatrickSkinType.skinType
+            if let fitzpatrickSkinType = try? healthKitStore.fitzpatrickSkinType() {
+                let uwFitzpatrickSkinType = fitzpatrickSkinType.skinType
+                attributes.append(Attribute(attributeType: "FitzpatrickSkinType", attributeValue: uwFitzpatrickSkinType.stringRepresentation))
+            }
             
-            let wheelchairUse = try healthKitStore.wheelchairUse()
-            let uwWheelchairUse = wheelchairUse.wheelchairUse
-            
-            let result = HealthData(birthday: birthday, biologicalSex: uwBiologicalSex, bloodType: uwBloodType, fitzpatrickSkinType: uwFitzpatrickSkinType, wheelchairUse: uwWheelchairUse)
-            return result
+            if let wheelchairUse = try? healthKitStore.wheelchairUse() {
+                let uwWheelchairUse = wheelchairUse.wheelchairUse
+                attributes.append(Attribute(attributeType: "WheelchairUse", attributeValue: uwWheelchairUse.stringRepresentation))
+            }
+
+            return attributes
         }
     }
     
