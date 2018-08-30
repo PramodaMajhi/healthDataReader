@@ -23,6 +23,7 @@ struct Measurement : Encodable {
     let measurementType: String?
     let measurementValue: String?
     let unitOfMeasure: String?
+    let source: String?
 }
 
 struct HealthData : Encodable {
@@ -42,16 +43,14 @@ class HealthDataUploader {
    
     public func getDataAndUpload() {
         do {
-            guard let heightSampleType = HKSampleType.quantityType(forIdentifier: .height) else {
-                print("Height Sample Type is no longer available in HealthKit")
-                return
-            }
-            
-            guard let weightSampleType = HKSampleType.quantityType(forIdentifier: .bodyMass) else {
-                print("Body Mass Sample Type is no longer available in HealthKit")
-                return
-            }
-            
+             let heightSampleType = HKSampleType.quantityType(forIdentifier: .height)!
+             let weightSampleType = HKSampleType.quantityType(forIdentifier: .bodyMass)!
+            // Added for heart rate
+            let heartRateType: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
+            let restingHeartRate: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .restingHeartRate)!
+            let heartRateVariabilitySDNN: HKQuantityType =  HKQuantityType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!
+            let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+            let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
             //let formatter = ISO8601DateFormatter()
             //self.healthData!.heightCaptureTimestamp = formatter.string(from: sample.endDate)
             
@@ -72,7 +71,8 @@ class HealthDataUploader {
                                                   endDate: sample.endDate,
                                                   measurementType: "Height",
                                                   measurementValue: String(format:"%.2f", heightInMeters),
-                                                  unitOfMeasure: "M")
+                                                  unitOfMeasure: "M",
+                                                  source:"")
                     self.healthData.measurements.append(measurement)
                 }
             }
@@ -89,16 +89,138 @@ class HealthDataUploader {
                                                   endDate: sample.endDate,
                                                   measurementType: "Weight",
                                                   measurementValue: String(format:"%.2f", weightInKilograms),
-                                                  unitOfMeasure: "Kg")
+                                                  unitOfMeasure: "Kg",
+                                                  source:"")
                     self.healthData.measurements.append(measurement)
                 }
             }
             
+            
+            // Heart rate
+            taskGroup.enter()
+            ProfileDataStore.getMostRecentSample(for: heartRateType) { (sample, error) in
+            
+                if let sample = sample {
+                    let hearRateInBpm = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                    ProfileDataStore.getSourceQuery(for:heartRateType) { sources in
+                        print("sources are : \(sources)")
+                        
+                        let measurement = Measurement(uuid: sample.uuid,
+                                                      startDate: sample.startDate,
+                                                      endDate: sample.endDate,
+                                                      measurementType: "Heart Rate",
+                                                      measurementValue: String(format:"%.00f", hearRateInBpm),
+                                                      unitOfMeasure: "Bpm",
+                                                      source:sources[0])
+                        self.healthData.measurements.append(measurement)
+                         taskGroup.leave()
+                    }
+                    
+                }
+            }
+           // end heart
+            
+            // Resting Heart Rate
+            taskGroup.enter()
+            ProfileDataStore.getMostRecentSample(for: restingHeartRate) { (sample, error) in
+                defer {
+                    taskGroup.leave()
+                }
+                
+                if let sample = sample {
+                    let restHearRateInBpm = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                    
+                    let measurement = Measurement(uuid: sample.uuid,
+                                                  startDate: sample.startDate,
+                                                  endDate: sample.endDate,
+                                                  measurementType: "Resting Heart Rate",
+                                                  measurementValue: String(format:"%.00f", restHearRateInBpm),
+                                                  unitOfMeasure: "Bpm",
+                                                  source:"")
+                    self.healthData.measurements.append(measurement)
+                }
+            }
+            // end resting heart
+            
+            //  Heart Rate variability
+            taskGroup.enter()
+            ProfileDataStore.getMostRecentSample(for: heartRateVariabilitySDNN) { (sample, error) in
+                defer {
+                    taskGroup.leave()
+                }
+                
+                if let sample = sample {
+                    let hearRateVarInMs = sample.quantity.doubleValue(for: HKUnit.secondUnit(with: .milli))
+                    let measurement = Measurement(uuid: sample.uuid,
+                                                  startDate: sample.startDate,
+                                                  endDate: sample.endDate,
+                                                  measurementType: "Heart Rate Variability",
+                                                  measurementValue: String(format:"%.00f", hearRateVarInMs),
+                                                  unitOfMeasure: "Ms",
+                                                  source:"")
+                    self.healthData.measurements.append(measurement)
+                }
+            }
+            // end heart rate variability
+            
+            //  steps count
+            taskGroup.enter()
+            ProfileDataStore.getMostRecentSample(for: stepsQuantityType) { (sample, error) in
+                defer {
+                    taskGroup.leave()
+                }
+                
+                if let sample = sample {
+                    
+                    let stepsInCount = sample.quantity.doubleValue(for: HKUnit.count())
+                    let measurement = Measurement(uuid: sample.uuid,
+                                                  startDate: sample.startDate,
+                                                  endDate: sample.endDate,
+                                                  measurementType: "steps count",
+                                                  measurementValue: String(format:"%.00f", stepsInCount),
+                                                  unitOfMeasure: "Count",
+                                                  source:"")
+                    self.healthData.measurements.append(measurement)
+                }
+            }
+            // steps count end
+            
+            //  sleep analysis
+            taskGroup.enter()
+            ProfileDataStore.retrieveSleepAnalysis { (sample, error) in
+                defer {
+                    taskGroup.leave()
+                }
+                
+                guard let sample  = sample else {
+                    return
+                }
+                //print("sample: \(sample.value)")
+                //print("sample start date\(sample.startDate)")
+                let seconds = sample.endDate.timeIntervalSince(sample.startDate)
+                let  (h,m,s) = self.secondsToHoursMinutesSeconds(seconds: Int(seconds))
+                // print ("sleep hours \(h) Hours, \(m) Minutes, \(s) Seconds")
+                let strHour =  String(h) + "h "
+                let strMinute = String(m) + "m"
+                let sleepHrs : String = strHour + strMinute
+                print(" sleep Hours : \(strHour) \(strMinute) ")
+                
+                let measurement = Measurement(uuid: sample.uuid,
+                                              startDate: sample.startDate,
+                                              endDate: sample.endDate,
+                                              measurementType: "sleep hours",
+                                              measurementValue: sleepHrs,
+                                              unitOfMeasure: "Hour",
+                                              source:"")
+                self.healthData.measurements.append(measurement)
+            }
+            // sleep analysis end
+            
             taskGroup.notify(queue: DispatchQueue.main, work: DispatchWorkItem(block: {
                 var urlComponents = URLComponents()
                 urlComponents.scheme = "http"
-                urlComponents.host = "127.0.0.1" // 192.168.1.2"
-                urlComponents.port = 3000
+                urlComponents.host = "34.218.64.50"//"127.0.0.1" // 192.168.1.2"
+                urlComponents.port = 80
                 urlComponents.path = "/healthData"
                 guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
                 
@@ -116,10 +238,12 @@ class HealthDataUploader {
                 encoder.dateEncodingStrategy = .iso8601
                 do {
                     let jsonData = try encoder.encode(self.healthData)
+                    
                     // ... and set our request's HTTP body
                     request.httpBody = jsonData
                     print("jsonData: ", String(data: request.httpBody!, encoding: .utf8) ?? "no body data")
                 } catch {
+                    print("-------------   unexpected error in : \(error) ------------")
                     //completion?(error)
                 }
                 
@@ -183,7 +307,9 @@ class HealthDataUploader {
             return attributes
         }
     }
-    
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
 
 }
 

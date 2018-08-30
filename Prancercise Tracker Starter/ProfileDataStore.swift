@@ -117,7 +117,126 @@ class ProfileDataStore {
         }
     }
     
+    class func testSourceQuery(){
+        guard let bodyMassType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
+            fatalError("*** Unable to get the body mass type ***")
+        }
+        var datasources: [String] = []
+        let query = HKSourceQuery.init(sampleType: bodyMassType,
+                                       samplePredicate: nil) { (query, sources, error) in
+                                        for source in sources! {
+                                            print("Source :  \(source.name)")
+                                            datasources.append(source.name)
+                                        }
+                                    }
+        
+            HKHealthStore().execute(query)
+        }
     
+    class func getSourceQuery(for sampleType: HKSampleType, completion: @escaping ([String]) -> ()) {
+        var datasources: [String] = []
+        let query = HKSourceQuery.init(sampleType: sampleType,
+                                       samplePredicate: nil) { (query, sources, error) in
+                                        for source in sources! {
+                                            print("Source :  \(source.name)")
+                                            datasources.append(source.name)
+                                        }
+                                        completion(datasources)
+                    }
+        
+        HKHealthStore().execute(query)
+        
+    }
+    
+    class func getFitness() {
+        let stepsCount = HKQuantityType.quantityType(
+            forIdentifier: HKQuantityTypeIdentifier.stepCount)
+        
+        let stepsSampleQuery = HKSampleQuery(sampleType: stepsCount!,
+                                             predicate: nil,
+                                             limit: 10000,
+                                             sortDescriptors: nil)  {
+                                                (query, results, error) in
+                                                if let results = results as? [HKQuantitySample] {
+                                                    for result in results {
+                                                        print("device: \(result.device) steps:\(result)" )
+                                                    }
+                                                }
+        }
+        
+        HKHealthStore().execute(stepsSampleQuery)
+    }
+    
+    class func retrieveSleepAnalysis(completion: @escaping (HKCategorySample?, Error?) -> Swift.Void) {
+        
+     
+        // first, we define the object type we want
+        if let sleepType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis) {
+            
+            // Use a sortDescriptor to get the recent data first
+            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+           // let datePredicate = HKQuery.predicateForSamples(withStart: nil, end: nil, options: .strictEndDate)
+            // we create our query with a block completion to execute
+            let query = HKSampleQuery(sampleType: sleepType, predicate: nil, limit: 30, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
+                
+                if error != nil {
+                    
+                    // something happened
+                    return
+                    
+                }
+                    //2. Always dispatch to the main thread when complete.
+                DispatchQueue.main.async {
+                    
+                    guard let samples = tmpResult,
+                        let mostRecentSample = samples.first as? HKCategorySample else {
+                            
+                            completion(nil, error)
+                            return
+                    }
+                    completion(mostRecentSample, nil)
+                  }
+            }
+            
+            // finally, we execute our query
+            HKHealthStore().execute(query)
+        }
+    }
+
+    
+ 
+    // Pramod added to read heart rate
+    class func createHeartRateStreamingQuery(_startDate: Date)  -> HKQuery?{
+        
+        var anchor: HKQueryAnchor?
+        
+        guard let heartRateType: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
+            return nil
+        }
+        
+        let datePredicate = HKQuery.predicateForSamples(withStart: _startDate, end: nil, options: .strictEndDate)
+        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [datePredicate])
+        
+        let heartRateQuery = HKAnchoredObjectQuery(type:
+        heartRateType, predicate: compoundPredicate, anchor: nil, limit: Int(HKObjectQueryNoLimit)) {
+            (query, sampleObjects, deletedObjects, newAnchor, error) in
+            
+            guard let newAnchor = newAnchor,
+                  let sampleObjects = sampleObjects else  {
+                    return
+            }
+           anchor = newAnchor
+        }
+        
+        heartRateQuery.updateHandler = {(query, sampleObjects, deletedObjects, newAnchor, error) -> Void in
+            guard let newAnchor = newAnchor,
+                let sampleObjects = sampleObjects else  {
+                    return
+            }
+            anchor = newAnchor
+        }
+        return heartRateQuery
+    }
     
 }
 

@@ -24,7 +24,7 @@
 		AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EAC071EAEA8E5002DD041 /* Workout.swift */; };
 		ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */; };
 		ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF4F9241EB215DE0031154C /* LaunchScreen.xib */; };
-		CD63A5162113926C000CE7DD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63A5152113926C000CE7DD /* HealthKit.framework */; };
+		CD1883A72124FB1D00E03D96 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1883A62124FB1D00E03D96 /* HealthKit.framework */; };
 		CD63A5422113BD0F000CE7DD /* DocumentDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63A5412113BD0F000CE7DD /* DocumentDataStore.swift */; };
 		CD686600210F9C0C0018A915 /* SummaryOfCare.xml in Resources */ = {isa = PBXBuildFile; fileRef = CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */; };
 		CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA421112C0F00A7518B /* HealthDataUploader.swift */; };
@@ -53,7 +53,7 @@
 		AC8EAC071EAEA8E5002DD041 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = "Prancercise Tracker/Workout.swift"; sourceTree = SOURCE_ROOT; };
 		ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = SOURCE_ROOT; };
 		ACF4F9251EB215DE0031154C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Prancercise Tracker/Base.lproj/LaunchScreen.xib"; sourceTree = SOURCE_ROOT; };
-		CD63A5152113926C000CE7DD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		CD1883A62124FB1D00E03D96 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		CD63A5412113BD0F000CE7DD /* DocumentDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDataStore.swift; sourceTree = "<group>"; };
 		CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SummaryOfCare.xml; sourceTree = "<group>"; };
 		CD791EA421112C0F00A7518B /* HealthDataUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataUploader.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD63A5162113926C000CE7DD /* HealthKit.framework in Frameworks */,
+				CD1883A72124FB1D00E03D96 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		04671701207C6F2A009611D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD63A5152113926C000CE7DD /* HealthKit.framework */,
+				CD1883A62124FB1D00E03D96 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -404,14 +404,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Prancercise Tracker/Health Data Reader-Writer.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NH5H4X2P32;
+				DEVELOPMENT_TEAM = 9G3PKRUFV5;
 				INFOPLIST_FILE = "Prancercise Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = technology.holmes;
+				PRODUCT_BUNDLE_IDENTIFIER = applehp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -427,14 +427,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Prancercise Tracker/Health Data Reader-Writer.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NH5H4X2P32;
+				DEVELOPMENT_TEAM = 9G3PKRUFV5;
 				INFOPLIST_FILE = "Prancercise Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = technology.holmes;
+				PRODUCT_BUNDLE_IDENTIFIER = applehp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;

@@ -37,6 +37,12 @@ class UserHealthProfile {
   var bloodType: HKBloodType?
   var heightInMeters: Double?
   var weightInKilograms: Double?
+  var heartRate: String?
+  var restingHeartRate: String?
+  var heartRateVariabilitySDNN: String?
+  var sleepHours: String?
+  var stepCount: String?
+  var readDataSource: String?
   
   var bodyMassIndex: Double? {
     

@@ -33,9 +33,18 @@ import HealthKit
 
 class ProfileViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        HealthKitSetupAssistant.authorizeHealthKit { (success, error) in
+            print("Was successful from controller \(success)")
+        }
+       
+    }
+    
   private enum ProfileSection: Int {
     case ageSexBloodType
     case weightHeightBMI
+    case BPM
     case readHealthKitData
   }
   
@@ -58,12 +67,24 @@ class ProfileViewController: UITableViewController {
   @IBOutlet private var heightLabel:UILabel!
   @IBOutlet private var bodyMassIndexLabel:UILabel!
   
-  private let userHealthProfile = UserHealthProfile()
+  @IBOutlet var bpmLable: UILabel!
+  
+  @IBOutlet var restingHRLabel: UILabel!
+    
+    
+    
+    private let userHealthProfile = UserHealthProfile()
   
   private func updateHealthInfo() {
     loadAndDisplayAgeSexAndBloodType()
     loadAndDisplayMostRecentWeight()
     loadAndDisplayMostRecentHeight()
+    loadAndDisplayheartRate()
+    loadAndDisplayRestingheartRate()
+    loadAndDisplayheartRateVariability()
+    loadAndDisplayStepCount()
+    loadAndDisplaySleepHours()
+   // onPostData(healthData: userHealthProfile)
     print("data read and displayed")
   }
   
@@ -122,6 +143,185 @@ class ProfileViewController: UITableViewController {
         self.updateLabels()
     }
   }
+    
+// reading heart rate
+    private func loadAndDisplayheartRate() {
+        //1. Use HealthKit to create the Heart Rate Sample Type
+        guard  let heartRateType: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
+            print("heart rate not avaialble from HealthKit")
+            return
+        }
+        
+       // let heartRateUnit = HKUnit(from: "count/min")
+        ProfileDataStore.getMostRecentSample(for: heartRateType) { (sample, error) in
+            
+            guard let sample = sample else {
+                
+                if let error = error {
+                    self.displayAlert(for: error)
+                }
+                
+                return
+            }
+            
+            //2. Convert the heart rate sample ,
+            //   and update the user interface.
+            
+            
+            //let value = sample.quantity.doubleValue(for: heartRateUnit)
+            //self.userHealthProfile.heartRate = String(value)
+            let value = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            let heartRateString = String(format: "%.00f", value)
+            self.userHealthProfile.heartRate = heartRateString
+            self.updateLabels()
+            
+        }
+    }
+// end of reading heart rate
+    
+// Reading resting heart
+    // reading heart rate
+    private func loadAndDisplayRestingheartRate() {
+        //1. Use HealthKit to create the Heart Rate Sample Type
+        guard  let restingHeartRate: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .restingHeartRate) else {
+            print("resting heart rate not avaialble from HealthKit")
+            return
+        }
+        
+        // let heartRateUnit = HKUnit(from: "count/min")
+        ProfileDataStore.getMostRecentSample(for: restingHeartRate) { (sample, error) in
+            
+            guard let sample = sample else {
+                
+                if let error = error {
+                    self.displayAlert(for: error)
+                }
+                
+                return
+            }
+            
+            //2. Convert the heart rate sample ,
+            //   and update the user interface.
+            
+            let value = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            let restingheartRateString = String(format: "%.00f", value)
+            self.userHealthProfile.restingHeartRate = restingheartRateString
+            self.updateLabels()
+            //ProfileDataStore.testSourceQuery()
+            //ProfileDataStore.getFitness()
+            //ProfileDataStore.retrieveSleepAnalysis()
+            
+        }
+    }
+    // end of reading heart rate
+// end
+    
+    // Reading resting heart variability
+
+    private func loadAndDisplayheartRateVariability() {
+        //1. Use HealthKit to create the Heart Rate Sample Type
+        guard  let heartRateVariabilitySDNN: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .heartRateVariabilitySDNN) else {
+            print("heart rate variability not avaialble from HealthKit")
+            return
+        }
+        
+        // let heartRateUnit = HKUnit(from: "count/min")
+        ProfileDataStore.getMostRecentSample(for: heartRateVariabilitySDNN) { (sample, error) in
+            
+            guard let sample = sample else {
+                
+                if let error = error {
+                    self.displayAlert(for: error)
+                }
+                
+                return
+            }
+            
+            //2. Convert the heart rate sample ,
+            //   and update the user interface.
+            let value = sample.quantity.doubleValue(for: HKUnit.secondUnit(with: .milli))
+            let heartRateVarString = String(format: "%.00f", value)
+            self.userHealthProfile.heartRateVariabilitySDNN = heartRateVarString
+            self.updateLabels()
+            
+        }
+    }
+    // end of reading heart rate variability
+    
+    
+    
+    // Reading step count
+    private func loadAndDisplayStepCount() {
+        //1. Use HealthKit read step count
+        guard  let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount) else {
+            print("step count is not avaialble from HealthKit")
+            return
+        }
+        
+        ProfileDataStore.getMostRecentSample(for: stepsQuantityType) { (sample, error) in
+            
+            guard let sample = sample else {
+                
+                if let error = error {
+                    self.displayAlert(for: error)
+                }
+                
+                return
+            }
+            
+            //2. Convert the heart rate sample ,
+            //   and update the user interface.
+            
+            let value = sample.quantity.doubleValue(for: HKUnit.count())
+            let stepCountString = String(format: "%.00f", value)
+            self.userHealthProfile.stepCount = stepCountString
+            self.updateLabels()
+            
+        }
+    }
+    // end of reading stepcount
+    
+    // Reading sleep analysis
+    private func loadAndDisplaySleepHours() {
+        
+//        ProfileDataStore.getMostRecentSample() { (sample, error) in
+//
+//            guard let sample = sample else {
+//
+//                if let error = error {
+//                    self.displayAlert(for: error)
+//                }
+//
+//                return
+//            }
+//
+//            //2. Convert the heart rate sample ,
+//            //   and update the user interface.
+//            print(sample.quantity.doubleValue(for: HKUnit.count()))
+//            let value = sample.quantity.doubleValue(for: HKUnit.count())
+//            let sleepString = String(format: "%.00f", value)
+//            self.userHealthProfile.sleepHours = sleepString
+//            self.updateLabels()
+//
+//        }
+        ProfileDataStore.retrieveSleepAnalysis { (sample, error) in
+            guard let sample  = sample else {
+                if let error = error {
+                    self.displayAlert(for: error)
+                }
+                return
+            }
+            //print("sample: \(sample.value)")
+            //print("sample start date\(sample.startDate)")
+            let seconds = sample.endDate.timeIntervalSince(sample.startDate)
+            let  (h,m,s) = self.secondsToHoursMinutesSeconds(seconds: Int(seconds))
+            print ("\(h) Hours, \(m) Minutes, \(s) Seconds")
+        }
+    }
+    // end of reading stepcount
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
   
     private func updateLabels() {
         if let age = userHealthProfile.age {
@@ -151,7 +351,65 @@ class ProfileViewController: UITableViewController {
         if let bodyMassIndex = userHealthProfile.bodyMassIndex {
             bodyMassIndexLabel.text = String(format: "%.02f", bodyMassIndex)
         }
+        if let heartRate = userHealthProfile.heartRate {
+            bpmLable.text =  heartRate + " bpm"
+            print("Heart Rate \(heartRate)")
+        }
+        if let restingHeartRate = userHealthProfile.restingHeartRate {
+            restingHRLabel.text =  restingHeartRate + " bpm"
+            print("Resting Heart Rate \(restingHeartRate)")
+            
+        }
+        if let heartRateVar = userHealthProfile.heartRateVariabilitySDNN {
+            //restingHRLabel.text =  heartRateVar + " bpm"
+            print("Heart Rate variability \(heartRateVar) ms")
+            
+        }
+        
+        if let stepCount = userHealthProfile.stepCount {
+            print("steps count \(stepCount)")
+        }
+        if let sleepHours = userHealthProfile.sleepHours {
+            print("sleep hours \(sleepHours)")
+        }
     }
+    
+    
+    func onPostData(healthData: UserHealthProfile) {
+        print("healthData \(healthData)")
+        let age = healthData.age!
+        print("profile \(age)")
+        //var json = JSONS
+        
+        let parameters = ["username": "@blueshield","heartRataType": "150bpm"]
+        guard let url = URL(string:"https://jsonplaceholder.typicode.com/posts") else {
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let  httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+        
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                }catch {
+                    print(error)
+                }
+            }
+        }.resume()
+    }
+    
     
  
   private func displayAlert(for error: Error) {

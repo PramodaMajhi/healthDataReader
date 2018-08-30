@@ -27,7 +27,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
+import Foundation
 import HealthKit
 
 class HealthKitSetupAssistant {
@@ -59,12 +59,20 @@ class HealthKitSetupAssistant {
                 completion(false, HealthkitSetupError.dataTypeNotAvailable)
                 return
         }
+        // Added for heart rate
+        let heartRateType: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
+        let restingHeartRate: HKQuantityType = HKQuantityType.quantityType(forIdentifier: .restingHeartRate)!
+        let heartRateVariabilitySDNN: HKQuantityType =  HKQuantityType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!
+        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+        let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
         
         //3. Prepare a list of types you want HealthKit to read and write
         let healthKitTypesToWrite: Set<HKSampleType> = [bodyMassIndex,
                                                         activeEnergy,
                                                         healthRecord,
-                                                        HKObjectType.workoutType()]
+                                                        HKObjectType.workoutType(),
+                                                        heartRateType, 
+                                                        restingHeartRate]
         
         let healthKitTypesToRead: Set<HKObjectType> = [dateOfBirth,
                                                        bloodType,
@@ -75,11 +83,19 @@ class HealthKitSetupAssistant {
                                                        healthRecord,
                                                        height,
                                                        bodyMass,
-                                                       HKObjectType.workoutType()]
+                                                       HKObjectType.workoutType(),
+                                                       heartRateType,
+                                                       restingHeartRate,
+                                                       heartRateVariabilitySDNN,
+                                                       stepsQuantityType,
+                                                       sleepType]
         //4. Request Authorization
         HKHealthStore().requestAuthorization(toShare: healthKitTypesToWrite,
                                              read: healthKitTypesToRead) { (success, error) in
+                                                print("Was authorization successful ? \(success)")
                                                 completion(success, error)
         }
     }
+    
+    
 }
