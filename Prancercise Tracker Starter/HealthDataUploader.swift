@@ -104,14 +104,14 @@ class HealthDataUploader {
                     let hearRateInBpm = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
                     ProfileDataStore.getSourceQuery(for:heartRateType) { sources in
                         print("sources are : \(sources)")
-                        
-                        let measurement = Measurement(uuid: sample.uuid,
+                        let source = sources.count > 1 ? sources[1] : sources[0]
+                        let measurement = Measurement(uuid: nil,
                                                       startDate: sample.startDate,
                                                       endDate: sample.endDate,
                                                       measurementType: "Heart Rate",
                                                       measurementValue: String(format:"%.00f", hearRateInBpm),
                                                       unitOfMeasure: "Bpm",
-                                                      source:sources[0])
+                                                      source:source)
                         self.healthData.measurements.append(measurement)
                          taskGroup.leave()
                     }
@@ -165,15 +165,15 @@ class HealthDataUploader {
             
             //  steps count
             taskGroup.enter()
-            ProfileDataStore.getMostRecentSample(for: stepsQuantityType) { (sample, error) in
+            ProfileDataStore.getTodaysSteps(for: stepsQuantityType) { (steps, sample, error) in
                 defer {
                     taskGroup.leave()
                 }
                 
                 if let sample = sample {
                     
-                    let stepsInCount = sample.quantity.doubleValue(for: HKUnit.count())
-                    let measurement = Measurement(uuid: sample.uuid,
+                    let stepsInCount = steps!
+                    let measurement = Measurement(uuid: nil, // statistics query does not have UUID
                                                   startDate: sample.startDate,
                                                   endDate: sample.endDate,
                                                   measurementType: "steps count",
@@ -219,7 +219,7 @@ class HealthDataUploader {
             taskGroup.notify(queue: DispatchQueue.main, work: DispatchWorkItem(block: {
                 var urlComponents = URLComponents()
                 urlComponents.scheme = "http"
-                urlComponents.host = "34.218.64.50"//"127.0.0.1" // 192.168.1.2"
+                urlComponents.host = "34.212.18.48"//"127.0.0.1" // 192.168.1.2"
                 urlComponents.port = 80
                 urlComponents.path = "/healthData"
                 guard let url = urlComponents.url else { fatalError("Could not create URL from components") }

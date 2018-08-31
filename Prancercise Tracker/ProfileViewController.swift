@@ -252,28 +252,23 @@ class ProfileViewController: UITableViewController {
     
     // Reading step count
     private func loadAndDisplayStepCount() {
+        
         //1. Use HealthKit read step count
-        guard  let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount) else {
-            print("step count is not avaialble from HealthKit")
-            return
+     guard  let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount) else {
+           print("step count is not avaialble from HealthKit")
+           return
         }
         
-        ProfileDataStore.getMostRecentSample(for: stepsQuantityType) { (sample, error) in
-            
-            guard let sample = sample else {
-                
+        ProfileDataStore.getTodaysSteps(for: stepsQuantityType) { (steps, sample, error) in
+            guard let steps  = steps else {
                 if let error = error {
                     self.displayAlert(for: error)
                 }
-                
                 return
             }
             
-            //2. Convert the heart rate sample ,
-            //   and update the user interface.
-            
-            let value = sample.quantity.doubleValue(for: HKUnit.count())
-            let stepCountString = String(format: "%.00f", value)
+            print("steps count found : \(steps)")
+            let stepCountString = String(format: "%.00f", steps)
             self.userHealthProfile.stepCount = stepCountString
             self.updateLabels()
             
@@ -284,26 +279,6 @@ class ProfileViewController: UITableViewController {
     // Reading sleep analysis
     private func loadAndDisplaySleepHours() {
         
-//        ProfileDataStore.getMostRecentSample() { (sample, error) in
-//
-//            guard let sample = sample else {
-//
-//                if let error = error {
-//                    self.displayAlert(for: error)
-//                }
-//
-//                return
-//            }
-//
-//            //2. Convert the heart rate sample ,
-//            //   and update the user interface.
-//            print(sample.quantity.doubleValue(for: HKUnit.count()))
-//            let value = sample.quantity.doubleValue(for: HKUnit.count())
-//            let sleepString = String(format: "%.00f", value)
-//            self.userHealthProfile.sleepHours = sleepString
-//            self.updateLabels()
-//
-//        }
         ProfileDataStore.retrieveSleepAnalysis { (sample, error) in
             guard let sample  = sample else {
                 if let error = error {
@@ -311,8 +286,6 @@ class ProfileViewController: UITableViewController {
                 }
                 return
             }
-            //print("sample: \(sample.value)")
-            //print("sample start date\(sample.startDate)")
             let seconds = sample.endDate.timeIntervalSince(sample.startDate)
             let  (h,m,s) = self.secondsToHoursMinutesSeconds(seconds: Int(seconds))
             print ("\(h) Hours, \(m) Minutes, \(s) Seconds")

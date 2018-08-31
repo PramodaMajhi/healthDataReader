@@ -204,6 +204,26 @@ class ProfileDataStore {
     }
 
     
+    class func getTodaysSteps(for sampleType: HKQuantityType, completion: @escaping (Double?, HKStatistics?, Error?) -> Void) {
+        
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKStatisticsQuery(quantityType: sampleType, quantitySamplePredicate: predicate, options: .cumulativeSum) {query, result, error in
+            
+            DispatchQueue.main.async {
+                guard let result = result,
+                    let sum = result.sumQuantity() else {
+                        completion(0.0, nil, error)
+                    return
+                }
+                completion(sum.doubleValue(for: HKUnit.count()), result,  nil)
+            }
+        }
+        
+        HKHealthStore().execute(query)
+    }
  
     // Pramod added to read heart rate
     class func createHeartRateStreamingQuery(_startDate: Date)  -> HKQuery?{
