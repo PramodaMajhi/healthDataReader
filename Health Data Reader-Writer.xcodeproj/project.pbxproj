@@ -30,6 +30,7 @@
 		CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA421112C0F00A7518B /* HealthDataUploader.swift */; };
 		CD791EA72111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */; };
 		CD791EA9211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */; };
+		CDDEBB7B213F450300B8563E /* PHRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEBB7A213F450300B8563E /* PHRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		CD791EA421112C0F00A7518B /* HealthDataUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataUploader.swift; sourceTree = "<group>"; };
 		CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKFitzpatrickSkinType+StringRepresentation.swift"; sourceTree = "<group>"; };
 		CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWheelchairUse+StringRepresentation.swift"; sourceTree = "<group>"; };
+		CDDEBB7A213F450300B8563E /* PHRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8EABE91EAEA855002DD041 /* CreateWorkoutTableViewController.swift */,
+				CDDEBB7A213F450300B8563E /* PHRViewController.swift */,
 				AC8EABEC1EAEA855002DD041 /* WorkoutsTableViewController.swift */,
 				AC8EABEA1EAEA855002DD041 /* MasterViewController.swift */,
 				AC8EABEB1EAEA855002DD041 /* ProfileViewController.swift */,
@@ -196,6 +199,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0900;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.ClassKit = {
+								enabled = 0;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -246,6 +255,7 @@
 				9F270C321EBE47EB0075412F /* WorkoutSession.swift in Sources */,
 				CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */,
 				AC8EABED1EAEA855002DD041 /* CreateWorkoutTableViewController.swift in Sources */,
+				CDDEBB7B213F450300B8563E /* PHRViewController.swift in Sources */,
 				AC8EABF21EAEA860002DD041 /* HealthKitSetupAssistant.swift in Sources */,
 				CD791EA9211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift in Sources */,
 				CD791EA72111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift in Sources */,

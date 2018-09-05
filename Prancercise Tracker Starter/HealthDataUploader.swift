@@ -108,7 +108,7 @@ class HealthDataUploader {
                         let measurement = Measurement(uuid: nil,
                                                       startDate: sample.startDate,
                                                       endDate: sample.endDate,
-                                                      measurementType: "Heart Rate",
+                                                      measurementType: "HeartRate",
                                                       measurementValue: String(format:"%.00f", hearRateInBpm),
                                                       unitOfMeasure: "Bpm",
                                                       source:source)
@@ -133,7 +133,7 @@ class HealthDataUploader {
                     let measurement = Measurement(uuid: sample.uuid,
                                                   startDate: sample.startDate,
                                                   endDate: sample.endDate,
-                                                  measurementType: "Resting Heart Rate",
+                                                  measurementType: "RestingHeartRate",
                                                   measurementValue: String(format:"%.00f", restHearRateInBpm),
                                                   unitOfMeasure: "Bpm",
                                                   source:"")
@@ -154,7 +154,7 @@ class HealthDataUploader {
                     let measurement = Measurement(uuid: sample.uuid,
                                                   startDate: sample.startDate,
                                                   endDate: sample.endDate,
-                                                  measurementType: "Heart Rate Variability",
+                                                  measurementType: "HeartRateVariability",
                                                   measurementValue: String(format:"%.00f", hearRateVarInMs),
                                                   unitOfMeasure: "Ms",
                                                   source:"")
@@ -176,7 +176,7 @@ class HealthDataUploader {
                     let measurement = Measurement(uuid: nil, // statistics query does not have UUID
                                                   startDate: sample.startDate,
                                                   endDate: sample.endDate,
-                                                  measurementType: "steps count",
+                                                  measurementType: "StepsCount",
                                                   measurementValue: String(format:"%.00f", stepsInCount),
                                                   unitOfMeasure: "Count",
                                                   source:"")
@@ -208,7 +208,7 @@ class HealthDataUploader {
                 let measurement = Measurement(uuid: sample.uuid,
                                               startDate: sample.startDate,
                                               endDate: sample.endDate,
-                                              measurementType: "sleep hours",
+                                              measurementType: "SleepHours",
                                               measurementValue: sleepHrs,
                                               unitOfMeasure: "Hour",
                                               source:"")
@@ -219,7 +219,8 @@ class HealthDataUploader {
             taskGroup.notify(queue: DispatchQueue.main, work: DispatchWorkItem(block: {
                 var urlComponents = URLComponents()
                 urlComponents.scheme = "http"
-                urlComponents.host = "34.212.18.48"//"127.0.0.1" // 192.168.1.2"
+                urlComponents.host = "ec2co-ecsel-7bx0iiddm5wr-1755561948.us-west-2.elb.amazonaws.com"
+                //"34.212.18.48"//"127.0.0.1" // 192.168.1.2"
                 urlComponents.port = 80
                 urlComponents.path = "/healthData"
                 guard let url = urlComponents.url else { fatalError("Could not create URL from components") }

@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import HealthKit
 
 class PHRViewController: UIViewController {
 
+    @IBOutlet var mainbutton: UIButton!
+    @IBAction func sendData(_ sender: Any) {
+        uploadHealthRecord()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        HealthKitSetupAssistant.authorizeHealthKit { (success, error) in
+            print("Was successful from controller \(success)")
+        }
+        mainbutton.layer.shadowRadius = 4
+        mainbutton.layer.cornerRadius = mainbutton.frame.height/2
+        mainbutton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        mainbutton.layer.shadowOpacity = 0.5
+       // mainbutton.backgroundColor = UIColor.darkGray
+       // mainbutton.setTitleColor(UIColor.white, for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +35,11 @@ class PHRViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func uploadHealthRecord() {
+        let hdu = HealthDataUploader()
+        hdu.getDataAndUpload()
     }
-    */
+
+    
 
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gs4-rY-Wb5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -167,6 +168,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="561" y="-2087"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RJn-IJ-4MY">
+            <objects>
+                <viewController storyboardIdentifier="PHRViewController" id="Gs4-rY-Wb5" customClass="PHRViewController" customModule="Health_Data_Reader_Writer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JBP-af-tkH"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bG-qa-cfb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UfJ-Gc-09g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M1-Eq-3hc">
+                                <rect key="frame" x="9" y="316" width="358" height="54"/>
+                                <color key="backgroundColor" red="0.2051061006042505" green="0.73145428833505477" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Sync My Personal Health Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendData:" destination="Gs4-rY-Wb5" eventType="touchUpInside" id="5qd-Jl-ufs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70780674559596335" green="0.84639642411133087" blue="0.89903723921267509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9M1-Eq-3hc" firstAttribute="centerX" secondItem="UfJ-Gc-09g" secondAttribute="centerX" id="DkU-gN-wYc"/>
+                            <constraint firstItem="9bG-qa-cfb" firstAttribute="top" secondItem="9M1-Eq-3hc" secondAttribute="bottom" constant="297" id="X1n-DM-Fxk"/>
+                            <constraint firstItem="9M1-Eq-3hc" firstAttribute="top" secondItem="JBP-af-tkH" secondAttribute="bottom" constant="296" id="YsH-qy-Dhl"/>
+                            <constraint firstItem="9M1-Eq-3hc" firstAttribute="leading" secondItem="UfJ-Gc-09g" secondAttribute="leadingMargin" constant="-7" id="eD2-m7-Zb5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainbutton" destination="9M1-Eq-3hc" id="Zz7-Gq-vDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaC-Xs-cds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.80000000000001" y="-3325.1874062968518"/>
         </scene>
         <!--Profile & BMI-->
         <scene sceneID="yW2-54-FD7">

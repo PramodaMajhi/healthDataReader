@@ -29,13 +29,87 @@
  */
 
 import UIKit
+import HealthKit
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  
+    
+  let healthStore:HKHealthStore = HKHealthStore()
+  var observeQuery: HKObserverQuery!
+    
+    func fetchLatestHeartRateSample(completionHandler: @escaping (_ sample: HKQuantitySample?) -> Void) {
+        guard let sampleType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
+            completionHandler(nil)
+            return
+        }
+        
+        let predicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: sampleType,
+                                  predicate: predicate,
+                                  limit: Int(HKObjectQueryNoLimit),
+                                  sortDescriptors: [sortDescriptor]) { (_, results, error) in
+                                    if let error = error {
+                                        print("Error: \(error.localizedDescription)")
+                                        return
+                                    }
+                                    
+                                    completionHandler(results?[0] as? HKQuantitySample)
+        }
+        
+        healthStore.execute(query)
+    }
+    
+    func observerHeartRateSamples() {
+        let heartRateSampleType = HKObjectType.quantityType(forIdentifier: .heartRate)
+        
+       if let observeQuery = observeQuery {
+               healthStore.stop(observeQuery)
+        }
+        
+         observeQuery  = HKObserverQuery(sampleType: heartRateSampleType!, predicate: nil) { (_, _, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            
+            self.fetchLatestHeartRateSample { (sample) in
+                guard let sample = sample else {
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                   // let heartRate = sample.quantity.doubleValue(for: self.heartRateUnit)
+                    let value = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                    let heartRateString = String(format: "%.00f", value)
+                    print("Heart Rate Sample: \(value)")
+                   self.updateHeartRate(heartRateValue: heartRateString)
+                    
+                }
+            }
+        }
+        
+        healthStore.execute(observeQuery)
+    }
+    
+    func updateHeartRate(heartRateValue: String) {
+        print("Method called happened inside delegate")
+        healthStore.enableBackgroundDelivery(for: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, frequency: HKUpdateFrequency.immediate) { (success, error) in
+            if success{
+                print("success")
+            } else {
+                print("fail")
+            }
+        }
+    }
+    
+    
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+   // let hdu = HealthDataUploader()
+   // hdu.getDataAndUpload()
     return true
   }
 }
