@@ -138,7 +138,7 @@ class ProfileDataStore {
         let query = HKSourceQuery.init(sampleType: sampleType,
                                        samplePredicate: nil) { (query, sources, error) in
                                         for source in sources! {
-                                            print("Source :  \(source.name)")
+                                           // print("Source :  \(source.name)")
                                             datasources.append(source.name)
                                         }
                                         completion(datasources)

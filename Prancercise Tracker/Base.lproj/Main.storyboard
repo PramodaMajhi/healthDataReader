@@ -184,7 +184,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M1-Eq-3hc">
                                 <rect key="frame" x="9" y="316" width="358" height="54"/>
                                 <color key="backgroundColor" red="0.2051061006042505" green="0.73145428833505477" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Sync My Personal Health Data">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -193,7 +193,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.70780674559596335" green="0.84639642411133087" blue="0.89903723921267509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9M1-Eq-3hc" firstAttribute="centerX" secondItem="UfJ-Gc-09g" secondAttribute="centerX" id="DkU-gN-wYc"/>
                             <constraint firstItem="9bG-qa-cfb" firstAttribute="top" secondItem="9M1-Eq-3hc" secondAttribute="bottom" constant="297" id="X1n-DM-Fxk"/>

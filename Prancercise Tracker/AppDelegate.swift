@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    // let heartRate = sample.quantity.doubleValue(for: self.heartRateUnit)
                     let value = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
                     let heartRateString = String(format: "%.00f", value)
-                    print("Heart Rate Sample: \(value)")
+                    print("Heart Rate in background delivery: \(value)")
                    self.updateHeartRate(heartRateValue: heartRateString)
                     
                 }
@@ -96,10 +96,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func updateHeartRate(heartRateValue: String) {
-        print("Method called happened inside delegate")
         healthStore.enableBackgroundDelivery(for: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!, frequency: HKUpdateFrequency.immediate) { (success, error) in
             if success{
-                print("success")
+                print(" ------------------------------------------------------ ")
+                print("::::: Synced my personal health data in background :::::")
+                print(" ------------------------------------------------------ ")
+                let hdu = HealthDataUploader()
+                 hdu.getDataAndUpload()
             } else {
                 print("fail")
             }
@@ -107,9 +110,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-   // let hdu = HealthDataUploader()
-   // hdu.getDataAndUpload()
+      //  observerHeartRateSamples()
     return true
   }
 }

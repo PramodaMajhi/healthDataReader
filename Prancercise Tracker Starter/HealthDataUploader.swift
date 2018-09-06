@@ -103,7 +103,7 @@ class HealthDataUploader {
                 if let sample = sample {
                     let hearRateInBpm = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
                     ProfileDataStore.getSourceQuery(for:heartRateType) { sources in
-                        print("sources are : \(sources)")
+                       // print("sources are : \(sources)")
                         let source = sources.count > 1 ? sources[1] : sources[0]
                         let measurement = Measurement(uuid: nil,
                                                       startDate: sample.startDate,
@@ -203,7 +203,7 @@ class HealthDataUploader {
                 let strHour =  String(h) + "h "
                 let strMinute = String(m) + "m"
                 let sleepHrs : String = strHour + strMinute
-                print(" sleep Hours : \(strHour) \(strMinute) ")
+               // print(" sleep Hours : \(strHour) \(strMinute) ")
                 
                 let measurement = Measurement(uuid: sample.uuid,
                                               startDate: sample.startDate,

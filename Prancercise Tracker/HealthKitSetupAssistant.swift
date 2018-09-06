@@ -92,7 +92,7 @@ class HealthKitSetupAssistant {
         //4. Request Authorization
         HKHealthStore().requestAuthorization(toShare: healthKitTypesToWrite,
                                              read: healthKitTypesToRead) { (success, error) in
-                                                print("Was authorization successful ? \(success)")
+                                                print("Was authorization successful \(success)")
                                                 completion(success, error)
         }
     }
