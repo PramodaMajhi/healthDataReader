@@ -20,16 +20,23 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict/>
+	</dict>
 	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
 	<string></string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>We will use your health information to better track Prancercise workouts.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>We will use your health information to better track Prancercise workouts.</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -48,13 +55,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict/>
-	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
