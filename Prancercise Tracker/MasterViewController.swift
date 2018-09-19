@@ -68,7 +68,7 @@ class MasterViewController: UITableViewController {
     }
     private func viewHealthRecords() {
         DocumentDataStore.getMostRecentDocument { (count, error) in
-            
+            // print("count \(count)")
             return nil
         }
     }
