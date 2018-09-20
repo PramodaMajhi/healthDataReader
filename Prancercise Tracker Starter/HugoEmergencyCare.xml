@@ -25,8 +25,8 @@
 	<templateId root="2.16.840.1.113883.10.20.22.1.2"/>
 	<id extension="66670992" root="1.3.6.1.4.1.42424242.4.99930.4.1"/>
 	<code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SUMMARIZATION OF EPISODE NOTE"/>
-	<title>Summary of Care</title>
-	<effectiveTime value="20120815110000-0800"/>
+	<title>Hugo Emergency Care Summary</title>
+	<effectiveTime value="20180917110000-0800"/>
 	<confidentialityCode codeSystem="2.16.840.1.113883.5.25" code="N" codeSystemName="HL7 ConfidentialityCode"/>
 	<languageCode code="en-US"/>
 	<!--  A)	Patient Demographics
@@ -46,12 +46,12 @@
 			<!-- HP is "primary home" from valueSet 2.16.840.1.113883.1.11.10637 -->
 			<addr use="HP">
 				<!-- You can have multiple [1..4] streetAddressLine elements. Single shown below -->
-				<streetAddressLine>1436 Jennyhill Ln.</streetAddressLine>
-				<city>Hollywood</city>
+				<streetAddressLine>50 Beale Street</streetAddressLine>
+				<city>San Francisco</city>
 				<!-- 5 or 9 digit zip codes from valueSet 2.16.840.1.113883.3.88.12.80.2-->
 				<!-- PostalCode is required if the country is US. If country is not specified, it's assumed to be US. If country -->
 				<!-- is something other than US, the postalCode MAY be present but MAY be bound to different vocabularies -->
-				<postalCode>90068</postalCode>
+				<postalCode>94105</postalCode>
 				<!-- State is required if the country is US. If country is not specified, it's assumed to be US. -->
 				<!-- If country is something other than US, the state MAY be present but MAY be bound to different vocabularies -->
 				<!-- OR is "Oregon" from valueSet 2.16.840.1.113883.3.88.12.80.1 -->
@@ -65,11 +65,11 @@
 			<telecom value="mailto://adam@diameterhealth.com" use="WP"/>
 			<patient>
 				<name use="L">
-					<given>Adam</given>
-					<family>Everyman</family>
+					<given>Hugo</given>
+					<family>Sanchez</family>
 				</name>
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender"/>
-				<birthTime value="19621022"/>
+				<birthTime value="19561115"/>
 				<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus"/>
 				<religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystem="2.16.840.1.113883.5.1076" codeSystemName="HL7 Religious Affiliation"/>
 				<!-- CDC Race and Ethnicity code set contains the five minimum race and ethnicity categories defined by OMB Standards -->
@@ -109,17 +109,17 @@
 			<addr use="WP">
 				<streetAddressLine>Get Well Clinic</streetAddressLine>
 				<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-				<city>Portland</city>
-				<state>OR</state>
-				<postalCode>97005</postalCode>
+				<city>San Francisco</city>
+				<state>CA</state>
+				<postalCode>94106</postalCode>
 				<country>US</country>
 			</addr>
-			<telecom value="tel:+1-(555)555-1004" use="WP"/>
+			<telecom value="tel:+1-(415)229-1004" use="WP"/>
 			<assignedPerson>
 				<name>
 					<prefix qualifier="TITLE">Dr</prefix>
-					<given>Samir</given>
-					<family>Khan</family>
+					<given>Suzanne</given>
+					<family>Lee</family>
 				</name>
 			</assignedPerson>
 		</assignedAuthor>
@@ -130,9 +130,9 @@
 			<id extension="4" root="1.3.6.1.4.1.42424242.4.99930.4.3.3"/>
 			<addr>
 				<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-				<city>Portland</city>
-				<state>OR</state>
-				<postalCode>97005</postalCode>
+				<city>San Francisco</city>
+				<state>CA</state>
+				<postalCode>94105</postalCode>
 				<country nullFlavor="UNK"/>
 			</addr>
 			<telecom value="tel:+1-(555)555-0000"/>
@@ -146,9 +146,9 @@
 				<telecom value="tel:+1-(555)555-0000"/>
 				<addr>
 					<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-					<city>Portland</city>
-					<state>OR</state>
-					<postalCode>97005</postalCode>
+					<city>San Francisco</city>
+					<state>CA</state>
+					<postalCode>94105</postalCode>
 					<country nullFlavor="UNK"/>
 				</addr>
 			</representedOrganization>
@@ -163,9 +163,9 @@
 				<telecom value="tel:+1-(555)555-0000"/>
 				<addr>
 					<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-					<city>Portland</city>
-					<state>OR</state>
-					<postalCode>97005</postalCode>
+					<city>San Francisco</city>
+					<state>CA</state>
+					<postalCode>94105</postalCode>
 					<country nullFlavor="UNK"/>
 				</addr>
 			</representedCustodianOrganization>
@@ -182,17 +182,17 @@
 			<addr use="WP">
 				<streetAddressLine>Get Well Clinic</streetAddressLine>
 				<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-				<city>Portland</city>
-				<state>OR</state>
-				<postalCode>97005</postalCode>
+				<city>San Francisco</city>
+				<state>CA</state>
+				<postalCode>94105</postalCode>
 				<country>US</country>
 			</addr>
 			<telecom value="tel:+1-(555)555-1004" use="WP"/>
 			<assignedPerson>
 				<name>
 					<prefix qualifier="TITLE">Dr</prefix>
-					<given>Samir</given>
-					<family>Khan</family>
+					<given>Suzanne</given>
+					<family>Lee</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -224,10 +224,10 @@ for or participating in the encounter.
 					there are two Care Team members, so two performer elements. 
 								 -->
 			<performer typeCode="PRF">
-				<!-- we infer from the test data description that Dr Khan is the PCP -->
+				<!-- we infer from the test data description that Dr Suzanne is the PCP -->
 				<!-- MAY provide functionCode CONF:16818-->
 				<functionCode codeSystem="2.16.840.1.113883.5.88" code="PCP" displayName="Primary Care Physician"/>
-				<!-- we do not know how long Dr Kahn has been associated with the patient	-->
+				<!-- we do not know how long Dr Suzanne has been associated with the patient	-->
 				<time>
 					<low nullFlavor="UNK"/>
 				</time>
@@ -240,9 +240,9 @@ for or participating in the encounter.
 					<addr use="WP">
 						<streetAddressLine>Get Well Clinic</streetAddressLine>
 						<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-						<city>Portland</city>
-						<state>OR</state>
-						<postalCode>97005</postalCode>
+						<city>San Francisco</city>
+						<state>CA</state>
+						<postalCode>94105</postalCode>
 						<country>US</country>
 					</addr>
 					<!-- work place-->
@@ -250,8 +250,8 @@ for or participating in the encounter.
 					<assignedPerson>
 						<name>
 							<prefix qualifier="TITLE">Dr</prefix>
-							<given>Samir</given>
-							<family>Khan</family>
+							<given>Suzanne</given>
+							<family>Lee</family>
 						</name>
 					</assignedPerson>
 				</assignedEntity>
@@ -269,9 +269,9 @@ for or participating in the encounter.
 					<addr use="WP">
 						<streetAddressLine>Get Well Clinic</streetAddressLine>
 						<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-						<city>Protland</city>
-						<state>OR</state>
-						<postalCode>97005</postalCode>
+						<city>San Francisco</city>
+						<state>CA</state>
+						<postalCode>94105</postalCode>
 						<country>US</country>
 					</addr>
 					<telecom value="tel:+1-(555)555-1014" use="WP"/>
@@ -307,17 +307,17 @@ for or participating in the encounter.
 					<addr use="WP">
 						<streetAddressLine>Get Well Clinic</streetAddressLine>
 						<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-						<city>Portland</city>
-						<state>OR</state>
-						<postalCode>97005</postalCode>
+						<city>San Francisco</city>
+						<state>CA</state>
+						<postalCode>94105</postalCode>
 						<country>US</country>
 					</addr>
 					<!-- work place-->
 					<telecom value="tel:+1-(555)555-1004" use="WP"/>
 					<assignedPerson>
 						<name>
-							<family>Khan</family>
-							<given>Samir</given>
+							<family>Suzanne</family>
+							<given>Lee</given>
 							<prefix qualifier="TITLE">Dr</prefix>
 						</name>
 					</assignedPerson>
@@ -334,9 +334,9 @@ for or participating in the encounter.
 						<addr use="WP">
 							<streetAddressLine>Get Well Clinic</streetAddressLine>
 							<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-							<city>Protland</city>
-							<state>OR</state>
-							<postalCode>97005</postalCode>
+							<city>San Francisco</city>
+							<state>CA</state>
+							<postalCode>94105</postalCode>
 							<country>US</country>
 						</addr>
 						<telecom value="tel:+1-(555)555-1014" use="WP"/>
@@ -354,10 +354,10 @@ for or participating in the encounter.
 					<location>
 						<addr use="WP">
 							<streetAddressLine>Get Well Clinic</streetAddressLine>
-							<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-							<city>Protland</city>
-							<state>OR</state>
-							<postalCode>97005</postalCode>
+							<streetAddressLine>50 Beale Street</streetAddressLine>
+							<city>San Francisco</city>
+							<state>CA</state>
+							<postalCode>94105</postalCode>
 							<country>US</country>
 						</addr>
 					</location>
@@ -380,97 +380,10 @@ for or participating in the encounter.
 					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1"/>
 					<code code="42349-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason For Referral"/>
 					<title>Reason For Referral</title>
-					<text>Pulmonary function tests, Dr. Penny Puffer, Tel:	555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: 08/17/2012</text>
+					<text>Diagnosed with Gastroenteritis, Dr. Penny Puffer, Tel:	555-555-1049, 1047 Healthcare Drive, San Franscisco, CA 94105, Scheduled date: 09/17/2018</text>
 				</section>
 			</component>
-			<component>
-				<!-- M)	Functional and Cognitive Status
-						•	No impairment, [SNOMED-CT: 66557003], 8/15/2012, Active 
-
-						from: https://raw.githubusercontent.com/jddamore/HL7-Task-Force-Examples/master/FUNCTIONAL_No_Impairment.xml
-				-->
-				<section>
-					<!-- This is an example of how to affirmatively assert there is no impairment in functional or cognitive status -->
-					<!-- If no information is known (i.e. assessment not performed), then a pattern of null entries would be more appropriate -->
-					<!-- This example uses terminology to assert 'No Impairment' rather than 'Impairment' and negationInd='true' (as value.negationInd). The test data included the No Impairment code. -->
-					<templateId root="2.16.840.1.113883.10.20.22.2.14"/>
-					<code code="47420-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Functional Status"/>
-					<title>Functional and Cognitive Status</title>
-					<!-- Narrative organized as a single table. Some systems may prefer separate tables for functional vs. cognitive assessments -->
-					<text>
-						<table>
-							<thead>
-								<tr>
-									<th colspan="4">Functional and Cognitive Status</th>
-								</tr>
-								<tr>
-									<th>Assessment</th>
-									<th>Date</th>
-									<th>Results</th>
-									<th>Comments</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr ID="FS_Narrative1">
-									<td>Functional Status</td>
-									<td>August 15 2012, 5:32pm</td>
-									<td ID="FS_Finding1">No impairment</td>
-									<td/>
-								</tr>
-								<tr ID="FS_Narrative2">
-									<td>Cognitive Status</td>
-									<td>August 15 2012, 5:32pm</td>
-									<td ID="FS_Finding2">No impairment</td>
-									<td/>
-								</tr>
-							</tbody>
-						</table>
-					</text>
-					<entry>
-						<observation classCode="OBS" moodCode="EVN">
-							<!-- Template for Functional Status Problem Observation. Note other templates may apply. -->
-							<!-- We chose Problem Observation over Result Observation since we didn't have an indication a specific test was performed. -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.68"/>
-							<id root="e4f9eb37-52ca-4e95-90f3-570dace107e6"/>
-							<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="248536006" displayName="Functional limitation"/>
-							<text>
-								<reference value="#FS_Narrative1"/>
-							</text>
-							<statusCode code="completed"/>
-							<effectiveTime>
-								<low value="20120815173215+0500"/>
-							</effectiveTime>
-							<value xsi:type="CD" code="66557003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No Impairment">
-								<originalText>
-									<reference value="#FS_Finding1"/>
-								</originalText>
-							</value>
-						</observation>
-					</entry>
-					<entry>
-						<!-- Template for Cognitive  Status Problem Observation. Note other templates may apply. -->
-						<!-- While only a single assessment was stated in test data, MU Stage 2 requires both functional and cognitive assessments as part of common data set. -->
-						<!-- We chose Problem Observation over Result Observation since we didn't have an indication a specific test was performed. -->
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.73"/>
-							<id root="faa09c19-fa1f-4a6c-ae79-10a3b711550f"/>
-							<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="373930000" displayName="Cognitive function finding"/>
-							<text>
-								<reference value="#FS_Narrative2"/>
-							</text>
-							<statusCode code="completed"/>
-							<effectiveTime>
-								<low value="20120815173215+0500"/>
-							</effectiveTime>
-							<value xsi:type="CD" code="66557003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No Impairment">
-								<originalText>
-									<reference value="#FS_Finding2"/>
-								</originalText>
-							</value>
-						</observation>
-					</entry>
-				</section>
-			</component>
+			
 			<component>
 				<!-- F)	Problems 
 							•	Costal Chondritis, [SNOMED CT: 64109004], Start: 8/15/2012, Active 3.6.3 Active Problem
@@ -493,16 +406,16 @@ for or participating in the encounter.
 							</thead>
 							<tbody>
 								<tr ID="Problem1">
-									<td>Costal Chondritis</td>
+									<td>Cadio Vascular</td>
 									<td>
-										<content>Onset: Aug 15, 2012</content>
+										<content>Onset: Sept 17, 2018</content>
 									</td>
 									<td>Active</td>
 								</tr>
 								<tr ID="Problem2">
-									<td>Asthma</td>
+									<td>Chest Pain</td>
 									<td>
-										<content>Onset: Sept 25, 2011</content>
+										<content>Onset: Sept 17, 2018</content>
 									</td>
 									<td>Active</td>
 								</tr>
@@ -608,7 +521,7 @@ for or participating in the encounter.
 									<td>
 										<content ID="MedicationDosage_2"/>
 									</td>
-									<td>Aug 10, 2012 - </td>
+									<td>Sept 17, 2018 - </td>
 									<td>Active</td>
 								</tr>
 							</tbody>
@@ -699,14 +612,14 @@ for or participating in the encounter.
 									<td ID="allergy4allergen">Penicillin G benzathine</td>
 									<td ID="allergy4reaction">Hives</td>
 									<td ID="allergy4reactionseverity">Severe</td>
-									<td>August 15 2012</td>
-									<td>2010</td>
+									<td>Sept 17 2018</td>
+									<td>2018</td>
 								</tr>
 								<tr ID="allergy5">
 									<td ID="allergy5allergen">Codeine</td>
 									<td ID="allergy5reaction">Nausea </td>
 									<td ID="allergy5reactionseverity">Mild to moderate</td>
-									<td>August 15 2012</td>
+									<td>Sept 17 2018</td>
 									<td></td>
 								</tr>
 							</tbody>
@@ -982,7 +895,7 @@ for or participating in the encounter.
 								<content>Never smoked</content>
 								<content>Started: </content>
 								<content>Stopped:</content>
-								<content>Recorded August 15, 2012 08:00am</content>
+								<content>Recorded Sept 17, 2018 08:00am</content>
 							</item>
 						</list>
 					</text>
@@ -1010,9 +923,9 @@ for or participating in the encounter.
 									<addr use="WP">
 										<streetAddressLine>Get Well Clinic</streetAddressLine>
 										<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-										<city>Protland</city>
-										<state>OR</state>
-										<postalCode>97005</postalCode>
+										<city>San Francisco</city>
+										<state>CA</state>
+										<postalCode>94105</postalCode>
 										<country>US</country>
 									</addr>
 									<telecom value="tel:+1-(555)555-1014" use="WP"/>
@@ -1054,7 +967,7 @@ for or participating in the encounter.
 							</thead>
 							<tbody>
 								<tr ID="ID0EGAIACA">
-									<td rowspan="6">15-Aug-2012</td>
+									<td rowspan="6">17-Sept-2018</td>
 									<td>Height</td>
 									<td>70 in</td>
 									<td/>
@@ -1095,9 +1008,9 @@ for or participating in the encounter.
 									<addr use="WP">
 										<streetAddressLine>Get Well Clinic</streetAddressLine>
 										<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
-										<city>Protland</city>
-										<state>OR</state>
-										<postalCode>97005</postalCode>
+										<city>San Francisco</city>
+										<state>CA</state>
+										<postalCode>94105</postalCode>
 										<country>US</country>
 									</addr>
 									<telecom value="tel:+1-(555)555-1014" use="WP"/>
@@ -1290,7 +1203,7 @@ for or participating in the encounter.
 							</thead>
 							<tbody>
 								<tr ID="Goal1">
-									<td>August 15, 2012 10:00am</td>
+									<td>September 17, 2018 10:00am</td>
 									<td ID="Goal1_desc">Weight Loss</td>
 									<td ID="Action1">
 										<content ID="Action1_Type">Patient Education:</content>
@@ -1299,7 +1212,7 @@ for or participating in the encounter.
 									</td>
 								</tr>
 								<tr ID="Goal2">
-									<td>August 15, 2012 10:00am</td>
+									<td>September 18, 2018 10:00am</td>
 									<td ID="Goal2_desc">Asthma management</td>
 									<td ID="Action2">
 										<content ID="Action2_Type">Patient Education:</content>
@@ -1327,7 +1240,7 @@ for or participating in the encounter.
 									<td ID="ID0EFFFFFFCA">
 										<content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content>
 									</td>
-									<td>17-Aug-2012</td>
+									<td>17-Sept-2018</td>
 									<td>Indication: <content ID="ID0EAAAAAAAAACA">Encounter Diagnosis - Costal Chondritis</content>
 									</td>
 								</tr>
@@ -1447,9 +1360,9 @@ for or participating in the encounter.
 									<id extension="3333333333" root="2.16.840.1.113883.4.6"/>
 									<addr>
 										<streetAddressLine>1047 Healthcare Dr</streetAddressLine>
-										<city>Portland</city>
-										<state>OR</state>
-										<postalCode>97005</postalCode>
+										<city>San Francisco</city>
+										<state>CA</state>
+										<postalCode>94105</postalCode>
 										<country>US</country>
 									</addr>
 									<telecom value="tel:+1-(555)555-1049"/>
@@ -1525,14 +1438,14 @@ for or participating in the encounter.
 							<tbody>
 								<tr ID="Encounter1">
 									<td ID="Encounter1_type">Office outpatient visit</td>
-									<td>Dr. Samir Kahn <content ID="Encounter1_performer_type">Internal Medicine</content>
+									<td>Dr. Suzanne Lee <content ID="Encounter1_performer_type">Internal Medicine</content>
 									</td>
 									<td>Community Urgent Care (Urgent Care Center) <paragraph>1004
 											Healthcare Dr.</paragraph>
-										<paragraph>Portland, OR 97005</paragraph>
+										<paragraph>San Francisco, CA 94105</paragraph>
 									</td>
-									<td>August 15, 2012</td>
-									<td ID="Encounter1_diagnosis">Costal Chondritis</td>
+									<td>Sept 17, 2018</td>
+									<td ID="Encounter1_diagnosis">Gastroenteritis</td>
 									<td ID="Encounter1_diagnosis_status">Active</td>
 								</tr>
 							</tbody>
@@ -1567,8 +1480,8 @@ for or participating in the encounter.
 									<assignedPerson>
 										<name>
 											<prefix>Dr.</prefix>
-											<given>Samir</given>											
-											<family>Khan</family>
+											<given>Suzanne</given>
+											<family>Lee</family>
 											<!--  Could alternately use <suffix>MD</suffix> -->
 										</name>
 									</assignedPerson>
@@ -1582,9 +1495,9 @@ for or participating in the encounter.
 									<code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center"/>
 									<addr>
 										<streetAddressLine>1004 Healthcare Dr.</streetAddressLine>
-										<city>Portland</city>
-										<state>OR</state>
-										<postalCode>97005</postalCode>
+										<city>San Francisco</city>
+										<state>CA</state>
+										<postalCode>94105</postalCode>
 									</addr>
 									<telecom value="tel:+1(555)555-1004"/>
 									<playingEntity classCode="PLC">
@@ -1608,7 +1521,7 @@ for or participating in the encounter.
 											<statusCode code="completed"/>
 											<!-- This same data may be represented in the Problem List -->
 											<effectiveTime>
-												<low value="20120815"/>
+												<low value="20180917"/>
 											</effectiveTime>
 											<!-- Test data is SNOMED but in practice this is probably an ICD9/10 code -->
 											<value xsi:type="CD" code="64109004" displayName="Costal Chondritis" codeSystem="2.16.840.1.113883.6.96">

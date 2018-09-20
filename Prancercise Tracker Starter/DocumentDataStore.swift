@@ -14,7 +14,7 @@ class DocumentDataStore {
          Load CDA from `Bundle`, transform into `Data` object, then create
          sample and save into HealthKit.
          */
-        if let cdaURL = Bundle.main.url(forResource: "SummaryOfCare", withExtension: "xml") {
+        if let cdaURL = Bundle.main.url(forResource: "HugoEmergencyCare", withExtension: "xml") {
             let cdaData = try! Data(contentsOf: cdaURL)
             let date = Date()
             let cdaSample = try! HKCDADocumentSample(data: cdaData, start: date, end: date, metadata: nil)

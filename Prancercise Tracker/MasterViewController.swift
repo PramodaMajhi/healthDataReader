@@ -65,12 +65,14 @@ class MasterViewController: UITableViewController {
   
     private func importHealthRecord() {
         DocumentDataStore.saveCDAToHealthKit()
+        print("Imported document")
     }
     private func viewHealthRecords() {
         DocumentDataStore.getMostRecentDocument { (count, error) in
-            // print("count \(count)")
+            
             return nil
         }
+        print("View healt record")
     }
     
     private func uploadHealthRecord() {

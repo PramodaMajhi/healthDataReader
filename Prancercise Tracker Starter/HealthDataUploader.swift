@@ -219,7 +219,8 @@ class HealthDataUploader {
             taskGroup.notify(queue: DispatchQueue.main, work: DispatchWorkItem(block: {
                 var urlComponents = URLComponents()
                 urlComponents.scheme = "http"
-                urlComponents.host = "ec2co-ecsel-7bx0iiddm5wr-1755561948.us-west-2.elb.amazonaws.com"
+                urlComponents.host =  "ec2co-ecsel-1btpzrrnkdqrn-1571469319.us-west-2.elb.amazonaws.com"
+                // Patrick's server URL"ec2co-ecsel-7bx0iiddm5wr-1755561948.us-west-2.elb.amazonaws.com"
                 //"34.212.18.48"//"127.0.0.1" // 192.168.1.2"
                 urlComponents.port = 80
                 urlComponents.path = "/healthData"
