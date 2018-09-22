@@ -31,6 +31,8 @@
 		CD791EA72111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */; };
 		CD791EA9211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */; };
 		CDB6BF002152B00700C082CC /* HugoEmergencyCare.xml in Resources */ = {isa = PBXBuildFile; fileRef = CDB6BEFF2152B00700C082CC /* HugoEmergencyCare.xml */; };
+		CDB6BF022155B8E700C082CC /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BF012155B8E700C082CC /* PageViewController.swift */; };
+		CDB835052156BA42004E8A81 /* TransperencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB835042156BA42004E8A81 /* TransperencyViewController.swift */; };
 		CDDEBB7B213F450300B8563E /* PHRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEBB7A213F450300B8563E /* PHRViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		CD791EA62111509A00A7518B /* HKFitzpatrickSkinType+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKFitzpatrickSkinType+StringRepresentation.swift"; sourceTree = "<group>"; };
 		CD791EA8211150F700A7518B /* HKWheelchairUse+StringRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWheelchairUse+StringRepresentation.swift"; sourceTree = "<group>"; };
 		CDB6BEFF2152B00700C082CC /* HugoEmergencyCare.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HugoEmergencyCare.xml; sourceTree = "<group>"; };
+		CDB6BF012155B8E700C082CC /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		CDB835042156BA42004E8A81 /* TransperencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransperencyViewController.swift; sourceTree = "<group>"; };
 		CDDEBB7A213F450300B8563E /* PHRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,10 +133,12 @@
 			isa = PBXGroup;
 			children = (
 				AC8EABE91EAEA855002DD041 /* CreateWorkoutTableViewController.swift */,
+				CDB6BF012155B8E700C082CC /* PageViewController.swift */,
 				CDDEBB7A213F450300B8563E /* PHRViewController.swift */,
 				AC8EABEC1EAEA855002DD041 /* WorkoutsTableViewController.swift */,
 				AC8EABEA1EAEA855002DD041 /* MasterViewController.swift */,
 				AC8EABEB1EAEA855002DD041 /* ProfileViewController.swift */,
+				CDB835042156BA42004E8A81 /* TransperencyViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				AC8EABF01EAEA855002DD041 /* WorkoutsTableViewController.swift in Sources */,
 				9F270C321EBE47EB0075412F /* WorkoutSession.swift in Sources */,
 				CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */,
+				CDB835052156BA42004E8A81 /* TransperencyViewController.swift in Sources */,
 				AC8EABED1EAEA855002DD041 /* CreateWorkoutTableViewController.swift in Sources */,
 				CDDEBB7B213F450300B8563E /* PHRViewController.swift in Sources */,
 				AC8EABF21EAEA860002DD041 /* HealthKitSetupAssistant.swift in Sources */,
@@ -268,6 +275,7 @@
 				AC8EABE81EAEA83F002DD041 /* AppDelegate.swift in Sources */,
 				AC891D731EDDBDC500A0F84A /* WorkoutDataStore.swift in Sources */,
 				AC8EABEE1EAEA855002DD041 /* MasterViewController.swift in Sources */,
+				CDB6BF022155B8E700C082CC /* PageViewController.swift in Sources */,
 				CD63A5422113BD0F000CE7DD /* DocumentDataStore.swift in Sources */,
 				AC8EABEF1EAEA855002DD041 /* ProfileViewController.swift in Sources */,
 				AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */,
