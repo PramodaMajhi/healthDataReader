@@ -25,6 +25,8 @@
 		ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */; };
 		ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF4F9241EB215DE0031154C /* LaunchScreen.xib */; };
 		CD1883A72124FB1D00E03D96 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1883A62124FB1D00E03D96 /* HealthKit.framework */; };
+		CD20E446216BFC1A00ADEAF0 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20E445216BFC1A00ADEAF0 /* SecurityViewController.swift */; };
+		CD3A2CF3215BF57D003C823B /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A2CF2215BF57D003C823B /* PrivacyViewController.swift */; };
 		CD63A5422113BD0F000CE7DD /* DocumentDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63A5412113BD0F000CE7DD /* DocumentDataStore.swift */; };
 		CD686600210F9C0C0018A915 /* SummaryOfCare.xml in Resources */ = {isa = PBXBuildFile; fileRef = CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */; };
 		CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD791EA421112C0F00A7518B /* HealthDataUploader.swift */; };
@@ -34,11 +36,15 @@
 		CDB6BF022155B8E700C082CC /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6BF012155B8E700C082CC /* PageViewController.swift */; };
 		CDB835052156BA42004E8A81 /* TransperencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB835042156BA42004E8A81 /* TransperencyViewController.swift */; };
 		CDDEBB7B213F450300B8563E /* PHRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEBB7A213F450300B8563E /* PHRViewController.swift */; };
+		FC89F1E736D5A15FABB7133E /* Pods_Health_Data_Reader_Writer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E91151A514F949F857CF988 /* Pods_Health_Data_Reader_Writer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04671700207C6F2A009611D9 /* Health Data Reader-Writer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Health Data Reader-Writer.entitlements"; path = "Prancercise Tracker/Health Data Reader-Writer.entitlements"; sourceTree = SOURCE_ROOT; };
 		04671704207CDA79009611D9 /* MedicalRecordsSample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MedicalRecordsSample.xml; sourceTree = "<group>"; };
+		2CD0EEBFB8C0185974A5B804 /* Pods-Health Data Reader-Writer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health Data Reader-Writer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health Data Reader-Writer/Pods-Health Data Reader-Writer.release.xcconfig"; sourceTree = "<group>"; };
+		3755ED0BBE3125BFF1A5ADF7 /* Pods-Health Data Reader-Writer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health Data Reader-Writer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health Data Reader-Writer/Pods-Health Data Reader-Writer.debug.xcconfig"; sourceTree = "<group>"; };
+		5E91151A514F949F857CF988 /* Pods_Health_Data_Reader_Writer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_Data_Reader_Writer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F270C311EBE47EB0075412F /* WorkoutSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
 		AC1BA50C1EAE5D2F00C99FE3 /* Health Data Reader-Writer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Data Reader-Writer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC891D721EDDBDC500A0F84A /* WorkoutDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutDataStore.swift; path = "Prancercise Tracker Starter/WorkoutDataStore.swift"; sourceTree = SOURCE_ROOT; };
@@ -58,6 +64,8 @@
 		ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = SOURCE_ROOT; };
 		ACF4F9251EB215DE0031154C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Prancercise Tracker/Base.lproj/LaunchScreen.xib"; sourceTree = SOURCE_ROOT; };
 		CD1883A62124FB1D00E03D96 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		CD20E445216BFC1A00ADEAF0 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		CD3A2CF2215BF57D003C823B /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		CD63A5412113BD0F000CE7DD /* DocumentDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDataStore.swift; sourceTree = "<group>"; };
 		CD6865FF210F9C0C0018A915 /* SummaryOfCare.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SummaryOfCare.xml; sourceTree = "<group>"; };
 		CD791EA421112C0F00A7518B /* HealthDataUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataUploader.swift; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD1883A72124FB1D00E03D96 /* HealthKit.framework in Frameworks */,
+				FC89F1E736D5A15FABB7133E /* Pods_Health_Data_Reader_Writer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1883A62124FB1D00E03D96 /* HealthKit.framework */,
+				5E91151A514F949F857CF988 /* Pods_Health_Data_Reader_Writer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -95,6 +105,7 @@
 				AC1BA50E1EAE5D2F00C99FE3 /* Health Data Reader-Writer */,
 				AC1BA50D1EAE5D2F00C99FE3 /* Products */,
 				04671701207C6F2A009611D9 /* Frameworks */,
+				DC7B688AC5847391C79C17CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +145,8 @@
 			children = (
 				AC8EABE91EAEA855002DD041 /* CreateWorkoutTableViewController.swift */,
 				CDB6BF012155B8E700C082CC /* PageViewController.swift */,
+				CD3A2CF2215BF57D003C823B /* PrivacyViewController.swift */,
+				CD20E445216BFC1A00ADEAF0 /* SecurityViewController.swift */,
 				CDDEBB7A213F450300B8563E /* PHRViewController.swift */,
 				AC8EABEC1EAEA855002DD041 /* WorkoutsTableViewController.swift */,
 				AC8EABEA1EAEA855002DD041 /* MasterViewController.swift */,
@@ -174,6 +187,15 @@
 			name = DataStores;
 			sourceTree = "<group>";
 		};
+		DC7B688AC5847391C79C17CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3755ED0BBE3125BFF1A5ADF7 /* Pods-Health Data Reader-Writer.debug.xcconfig */,
+				2CD0EEBFB8C0185974A5B804 /* Pods-Health Data Reader-Writer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC1BA51E1EAE5D2F00C99FE3 /* Build configuration list for PBXNativeTarget "Health Data Reader-Writer" */;
 			buildPhases = (
+				5D1CFBE54F7E313775897054 /* [CP] Check Pods Manifest.lock */,
 				AC1BA5081EAE5D2F00C99FE3 /* Sources */,
 				AC1BA5091EAE5D2F00C99FE3 /* Frameworks */,
 				AC1BA50A1EAE5D2F00C99FE3 /* Resources */,
+				F490B052E0A755E034E8B273 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +279,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D1CFBE54F7E313775897054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Health Data Reader-Writer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F490B052E0A755E034E8B273 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Health Data Reader-Writer/Pods-Health Data Reader-Writer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Canvas/Canvas.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Canvas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health Data Reader-Writer/Pods-Health Data Reader-Writer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC1BA5081EAE5D2F00C99FE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +329,7 @@
 				AC8EABF01EAEA855002DD041 /* WorkoutsTableViewController.swift in Sources */,
 				9F270C321EBE47EB0075412F /* WorkoutSession.swift in Sources */,
 				CD791EA521112C0F00A7518B /* HealthDataUploader.swift in Sources */,
+				CD20E446216BFC1A00ADEAF0 /* SecurityViewController.swift in Sources */,
 				CDB835052156BA42004E8A81 /* TransperencyViewController.swift in Sources */,
 				AC8EABED1EAEA855002DD041 /* CreateWorkoutTableViewController.swift in Sources */,
 				CDDEBB7B213F450300B8563E /* PHRViewController.swift in Sources */,
@@ -277,6 +343,7 @@
 				AC8EABEE1EAEA855002DD041 /* MasterViewController.swift in Sources */,
 				CDB6BF022155B8E700C082CC /* PageViewController.swift in Sources */,
 				CD63A5422113BD0F000CE7DD /* DocumentDataStore.swift in Sources */,
+				CD3A2CF3215BF57D003C823B /* PrivacyViewController.swift in Sources */,
 				AC8EABEF1EAEA855002DD041 /* ProfileViewController.swift in Sources */,
 				AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */,
 				AC8EABF91EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */,
@@ -421,6 +488,7 @@
 		};
 		AC1BA51F1EAE5D2F00C99FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3755ED0BBE3125BFF1A5ADF7 /* Pods-Health Data Reader-Writer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Prancercise Tracker/Health Data Reader-Writer.entitlements";
@@ -444,6 +512,7 @@
 		};
 		AC1BA5201EAE5D2F00C99FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD0EEBFB8C0185974A5B804 /* Pods-Health Data Reader-Writer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Prancercise Tracker/Health Data Reader-Writer.entitlements";

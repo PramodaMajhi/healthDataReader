@@ -1,0 +1,6 @@
+framework module Pods_Health_Data_Reader_Writer {
+  umbrella header "Pods-Health Data Reader-Writer-umbrella.h"
+
+  export *
+  module * { export * }
+}

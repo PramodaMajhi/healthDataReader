@@ -8,6 +8,7 @@
 
 import UIKit
 import HealthKit
+import ProgressHUD
 
 class PHRViewController: UIViewController {
 
@@ -15,7 +16,8 @@ class PHRViewController: UIViewController {
     
     
     @IBAction func sendData(_ sender: Any) {
-         uploadHealthRecord()
+        ProgressHUD.showSuccess("Done")
+        uploadHealthRecord()
     }
     
 

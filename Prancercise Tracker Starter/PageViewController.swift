@@ -9,7 +9,7 @@
 import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-
+    var pageControl = UIPageControl()
     lazy var orderViewControllers: [UIViewController] = {
         return [self.newVc(viewConroller: "privacy"), self.newVc(viewConroller: "security"), self.newVc(viewConroller: "transparency")]
     }()
@@ -19,13 +19,32 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         super.viewDidLoad()
 
         self.dataSource = self
+        self.delegate = self
         if let firstViewController = orderViewControllers.first {
             setViewControllers([firstViewController], direction:.forward, animated: true, completion: nil)
         }
+        configurePageControl()
+    }
+  
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 160,width: UIScreen.main.bounds.width,height: 40))
+        self.pageControl.numberOfPages = orderViewControllers.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        // self.pageControl.backgroundColor = UIColor.darkGray
+        self.view.addSubview(pageControl)
     }
     
     func newVc(viewConroller:String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewConroller)
+    }
+    // MARK: Delegate methords
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = orderViewControllers.index(of: pageContentViewController)!
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

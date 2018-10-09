@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import Canvas
 
 class SecurityViewController: UIViewController {
 
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var thirdView: UIView!
+    @IBOutlet weak var fourthView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        animateSecurity()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+   func animateSecurity() {
+        firstView.startCanvasAnimation()
+        thirdView.startCanvasAnimation()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateSecurity()
     }
     
 
