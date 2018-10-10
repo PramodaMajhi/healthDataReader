@@ -16,9 +16,8 @@ class PrivacyViewController: UIViewController {
     let bodyLabel  = UILabel()
     
     @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var thirdView: UIView!
-    @IBOutlet weak var fourthView: UIView!
+   
     
     fileprivate func setupLabels() {
        // titleLabel.backgroundColor = .red

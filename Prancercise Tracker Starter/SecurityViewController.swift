@@ -12,9 +12,8 @@ import Canvas
 class SecurityViewController: UIViewController {
 
     @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var thirdView: UIView!
-    @IBOutlet weak var fourthView: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
