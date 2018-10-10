@@ -174,16 +174,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mt2-HN-yUw" userLabel="top Container" customClass="CSAnimationView">
-                                <rect key="frame" x="-1" y="0.0" width="377" height="335"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="ogB-La-3gS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ogB-La-3gS" firstAttribute="top" secondItem="mt2-HN-yUw" secondAttribute="top" id="13P-0R-eED"/>
-                                    <constraint firstAttribute="bottom" secondItem="ogB-La-3gS" secondAttribute="bottom" id="avK-DI-a30"/>
-                                    <constraint firstItem="ogB-La-3gS" firstAttribute="leading" secondItem="mt2-HN-yUw" secondAttribute="leading" id="jvS-iT-HEy"/>
+                                    <constraint firstAttribute="bottom" secondItem="ogB-La-3gS" secondAttribute="bottom" id="Sh7-AO-1u6"/>
+                                    <constraint firstItem="ogB-La-3gS" firstAttribute="top" secondItem="mt2-HN-yUw" secondAttribute="top" id="e5J-jM-ErR"/>
+                                    <constraint firstItem="ogB-La-3gS" firstAttribute="leading" secondItem="mt2-HN-yUw" secondAttribute="leading" id="trv-NN-Wct"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="slideLeft"/>
@@ -196,25 +196,23 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Privacy-1" translatesAutoresizingMaskIntoConstraints="NO" id="hjE-ho-Hgl">
-                                <rect key="frame" x="16" y="359" width="343" height="22"/>
+                                <rect key="frame" x="146" y="360" width="79" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="xno-Bg-dvP"/>
+                                    <constraint firstAttribute="height" constant="22" id="oT4-j2-Yzd"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skip" translatesAutoresizingMaskIntoConstraints="NO" id="hV4-F9-Uyb">
-                                <rect key="frame" x="16" y="627" width="341" height="13"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSt-aF-Rbx" userLabel="bottom Container" customClass="CSAnimationView">
-                                <rect key="frame" x="20" y="435" width="339" height="65"/>
+                                <rect key="frame" x="18" y="422" width="341" height="163"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Your health informat" translatesAutoresizingMaskIntoConstraints="NO" id="H6Z-3I-KXL">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="341" height="163"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="H6Z-3I-KXL" firstAttribute="leading" secondItem="QSt-aF-Rbx" secondAttribute="leading" id="7NK-GN-OJH"/>
-                                    <constraint firstAttribute="trailing" secondItem="H6Z-3I-KXL" secondAttribute="trailing" id="Y2k-BC-L4V"/>
-                                    <constraint firstAttribute="bottom" secondItem="H6Z-3I-KXL" secondAttribute="bottom" id="aCh-yU-ynN"/>
+                                    <constraint firstAttribute="trailing" secondItem="H6Z-3I-KXL" secondAttribute="trailing" id="8BC-Vl-wl9"/>
+                                    <constraint firstItem="H6Z-3I-KXL" firstAttribute="top" secondItem="QSt-aF-Rbx" secondAttribute="top" id="I24-XE-COz"/>
+                                    <constraint firstItem="H6Z-3I-KXL" firstAttribute="leading" secondItem="QSt-aF-Rbx" secondAttribute="leading" id="d6H-f2-hrM"/>
+                                    <constraint firstAttribute="bottom" secondItem="H6Z-3I-KXL" secondAttribute="bottom" id="sDp-NO-M1j"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeInUp"/>
@@ -226,27 +224,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skip" translatesAutoresizingMaskIntoConstraints="NO" id="qcU-Ws-G9H">
+                                <rect key="frame" x="173" y="626" width="28" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="isu-Ds-jgu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hV4-F9-Uyb" firstAttribute="leading" secondItem="2rP-GC-GW8" secondAttribute="leading" constant="16" id="1sU-1K-Aci"/>
-                            <constraint firstItem="hjE-ho-Hgl" firstAttribute="top" secondItem="mt2-HN-yUw" secondAttribute="bottom" constant="24" id="2eL-h7-gsB"/>
-                            <constraint firstItem="hV4-F9-Uyb" firstAttribute="top" secondItem="ogB-La-3gS" secondAttribute="bottom" constant="292" id="5Dh-1G-WDj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QSt-aF-Rbx" secondAttribute="trailing" id="Adh-17-2c0"/>
-                            <constraint firstAttribute="bottom" secondItem="QSt-aF-Rbx" secondAttribute="bottom" constant="167" id="Ao6-nI-Bqu"/>
-                            <constraint firstAttribute="trailing" secondItem="hV4-F9-Uyb" secondAttribute="trailing" constant="18" id="Auo-kQ-rat"/>
-                            <constraint firstItem="QSt-aF-Rbx" firstAttribute="top" secondItem="2rP-GC-GW8" secondAttribute="top" constant="435" id="EHh-Mt-N6e"/>
-                            <constraint firstItem="ogB-La-3gS" firstAttribute="centerX" secondItem="hV4-F9-Uyb" secondAttribute="centerX" id="Jfh-hp-h8y"/>
-                            <constraint firstItem="hV4-F9-Uyb" firstAttribute="top" secondItem="rXB-ql-ksF" secondAttribute="bottom" constant="607" id="Ktv-Ox-r13"/>
-                            <constraint firstItem="mt2-HN-yUw" firstAttribute="centerX" secondItem="hjE-ho-Hgl" secondAttribute="centerX" id="Myw-fI-H0S"/>
-                            <constraint firstItem="hjE-ho-Hgl" firstAttribute="leading" secondItem="hV4-F9-Uyb" secondAttribute="trailing" constant="-341" id="O7P-te-Aus"/>
-                            <constraint firstAttribute="bottom" secondItem="hV4-F9-Uyb" secondAttribute="bottom" constant="27" id="XpY-eQ-lx8"/>
-                            <constraint firstItem="hjE-ho-Hgl" firstAttribute="trailing" secondItem="hV4-F9-Uyb" secondAttribute="trailing" constant="2" id="odE-1L-GL0"/>
-                            <constraint firstItem="mt2-HN-yUw" firstAttribute="top" secondItem="2rP-GC-GW8" secondAttribute="top" id="oou-P0-Lxn"/>
-                            <constraint firstItem="QSt-aF-Rbx" firstAttribute="leading" secondItem="hV4-F9-Uyb" secondAttribute="leading" constant="4" id="tEW-ab-0HX"/>
-                            <constraint firstItem="hjE-ho-Hgl" firstAttribute="leading" secondItem="QSt-aF-Rbx" secondAttribute="leading" constant="-4" id="tMF-qf-yWK"/>
-                            <constraint firstItem="Xbg-uN-dsr" firstAttribute="top" secondItem="hV4-F9-Uyb" secondAttribute="bottom" constant="27" id="x6L-I3-xCr"/>
-                            <constraint firstItem="H6Z-3I-KXL" firstAttribute="top" secondItem="hjE-ho-Hgl" secondAttribute="bottom" constant="54" id="y0N-hY-NAf"/>
+                            <constraint firstItem="mt2-HN-yUw" firstAttribute="top" secondItem="2rP-GC-GW8" secondAttribute="top" id="5iI-em-UoH"/>
+                            <constraint firstItem="hjE-ho-Hgl" firstAttribute="leading" secondItem="2rP-GC-GW8" secondAttribute="leading" constant="146" id="6kp-h6-zZn"/>
+                            <constraint firstAttribute="trailing" secondItem="mt2-HN-yUw" secondAttribute="trailing" id="9g2-VS-nm9"/>
+                            <constraint firstItem="QSt-aF-Rbx" firstAttribute="trailing" secondItem="2rP-GC-GW8" secondAttribute="trailingMargin" id="Cus-am-Ome"/>
+                            <constraint firstItem="mt2-HN-yUw" firstAttribute="centerX" secondItem="qcU-Ws-G9H" secondAttribute="centerX" id="FrP-ki-PrW"/>
+                            <constraint firstItem="QSt-aF-Rbx" firstAttribute="top" secondItem="2rP-GC-GW8" secondAttribute="top" constant="422" id="JBx-Rc-OgH"/>
+                            <constraint firstItem="mt2-HN-yUw" firstAttribute="leading" secondItem="2rP-GC-GW8" secondAttribute="leading" id="Q5z-R1-6bv"/>
+                            <constraint firstItem="hjE-ho-Hgl" firstAttribute="top" secondItem="mt2-HN-yUw" secondAttribute="bottom" constant="25" id="SWd-En-FDw"/>
+                            <constraint firstItem="Xbg-uN-dsr" firstAttribute="top" secondItem="qcU-Ws-G9H" secondAttribute="bottom" constant="28" id="aHz-Gg-xkG"/>
+                            <constraint firstItem="qcU-Ws-G9H" firstAttribute="top" secondItem="QSt-aF-Rbx" secondAttribute="bottom" constant="41" id="cyx-LL-Jb7"/>
+                            <constraint firstItem="QSt-aF-Rbx" firstAttribute="top" secondItem="hjE-ho-Hgl" secondAttribute="bottom" constant="40" id="hgW-Bu-ult"/>
+                            <constraint firstItem="QSt-aF-Rbx" firstAttribute="leading" secondItem="2rP-GC-GW8" secondAttribute="leadingMargin" constant="2" id="qS5-Bb-1LH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="Type" value=""/>
@@ -265,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="588-vM-BhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="-2920.3898050974517"/>
+            <point key="canvasLocation" x="44" y="-2921.2893553223389"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RJn-IJ-4MY">
@@ -369,7 +367,7 @@
                                         <real key="value" value="1.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <integer key="value" value="0"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -467,7 +465,7 @@
                                         <real key="value" value="1.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <integer key="value" value="1"/>
+                                        <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -490,7 +488,7 @@
                                         <real key="value" value="1.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <integer key="value" value="0"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
